@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <FrameLayout
+        android:id="@+id/cardView1"
+        android:layout_width="match_parent"
+        android:background="@drawable/rectanglew"
+        android:layout_height="wrap_content"
+        android:layout_margin="25dp"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="20dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Dr. Brandon Reid"
+                    android:textSize="22dp"
+                    android:textColor="#0D0D0D">
+                </TextView>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Digital (Video consultation)"
+                    android:textColor="#919191"
+                    android:textSize="17dp">
+
+                </TextView>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="20dp">
+                    <LinearLayout
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="16dp"
+                            android:text="Duration"
+                            android:textColor="#989898"
+                            >
+                        </TextView>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="16dp"
+                            android:text="Start time"
+                            android:textColor="#989898"
+                            android:layout_marginTop="5dp">
+                        </TextView>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="16dp"
+                            android:text="Date"
+                            android:textColor="#989898"
+                            android:layout_marginTop="5dp">
+                        </TextView>
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        >
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="16dp"
+                            android:text=":"
+                            android:textColor="#989898"
+                            >
+                        </TextView>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="16dp"
+                            android:text=":"
+                            android:textColor="#989898"
+                            android:layout_marginTop="5dp">
+                        </TextView>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="16dp"
+                            android:text=":"
+                            android:textColor="#989898"
+                            android:layout_marginTop="5dp">
+                        </TextView>
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="90dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginLeft="20dp">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="16dp"
+                            android:text="02:00 hrs"
+                            android:textColor="#000000"
+                            >
+                        </TextView>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="16dp"
+                            android:text="12:45 p.m"
+                            android:textColor="#000000"
+                            android:layout_marginTop="5dp">
+                        </TextView>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="16dp"
+                            android:text="08:11 p.m"
+                            android:textColor="#000000"
+                            android:layout_marginTop="5dp">
+                        </TextView>
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginLeft="20dp">
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/image"
+                    android:layout_width="81dp"
+                    android:layout_height="81dp"
+                    android:layout_centerHorizontal="true"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/descrip"
+                    app:shapeAppearanceOverlay="@style/Rounded"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="70dp"/>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+        <android.widget.Button
+
+            style="@style/buttonStyle"
+            android:layout_width="150dp"
+            android:layout_height="@dimen/button_height"
+            android:layout_above="@+id/button2"
+            android:layout_gravity="bottom"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="15dp"
+            android:fontFamily="@font/axiforma"
+            android:text="Give prescription"
+            android:textSize="12dp"
+            android:backgroundTint="#77FFBB"
+            />
+        <android.widget.Button
+
+            style="@style/buttonStyle"
+            android:layout_width="150dp"
+            android:layout_height="@dimen/button_height"
+            android:layout_gravity="bottom|right"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="15dp"
+            android:fontFamily="@font/axiforma"
+            android:text="Cancel Appointment"
+            android:textSize="12dp"
+            android:backgroundTint="#FF7C95"
+            />
+
+    </FrameLayout>
+
+</LinearLayout>

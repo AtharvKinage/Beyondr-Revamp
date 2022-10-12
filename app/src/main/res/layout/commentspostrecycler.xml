@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ingredia Nutrisha"
+                android:textColor="#333333"
+                android:textSize="10dp"
+                android:fontFamily="@font/axiforma">
+
+            </TextView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="190dp"
+                android:text="40 min ago"
+                android:textColor="#77838F"
+                android:textSize="9dp"
+                android:fontFamily="@font/axiforma">
+
+            </TextView>
+
+        </LinearLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="Aenean nec volutpat nisi. Ut tincidunt magna enam lorem, eget venenatis velit ultricies at. Phasellus a vel urna vehicula, iaculis leo a, scelerisque…"
+            android:fontFamily="@font/axiforma"
+            android:textColor="#77838F"
+            android:textSize="14dp">
+
+        </TextView>
+
+
+    </LinearLayout>
+
+</LinearLayout>

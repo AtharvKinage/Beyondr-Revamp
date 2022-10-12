@@ -1,0 +1,11 @@
+{
+  "AppSyncApiName": "preyank",
+  "DynamoDBBillingMode": "PAY_PER_REQUEST",
+  "DynamoDBEnableServerSideEncryption": false,
+  "AuthCognitoUserPoolId": {
+    "Fn::GetAtt": [
+      "authpreyankb3f07430",
+      "Outputs.UserPoolId"
+    ]
+  }
+}

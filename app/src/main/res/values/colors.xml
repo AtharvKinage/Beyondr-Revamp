@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+    <color name="purple_200">#00B6CD</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="gray_lightest">#DEDEDE</color>
+    <color name="gray_light">#CCCCCC</color>
+    <color name="gray_dark">#666666</color>
+    <color name="gray_deep_dark">#333333</color>
+    <color name="buttonblue">#3EC6FF</color>
+
+    <color name="blue_medium">#44A2FC</color>
+    <color name="blue_light">#0ECFFF</color>
+    <color name="blue_alpha">#9CD9FF</color>
+
+    <color name="dark_black">#CC262626</color>
+    <color name="black_half_transparent">#66000000</color>
+    <color name="black_full_transparent">#22000000</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="blue">#00BFD9</color>
+    <color name="gray">#BEBEBE</color>
+
+    <color name="darkGray">#848484</color>
+    <color name="hint_text_color">#A1A4B2</color>
+    <color name="edittext_bg">#F2F3F7</color>
+    <color name="text_gray">#155BE8</color>
+    <color name="red">#FF3C3C</color>
+    <color name="blueTheme">#8EC5FC</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="light_white">#D6FFFFFF</color>
+    <color name="transparent">#00FFFFFF</color>
+    <color name="activity_bg_color">#FDFDFE</color>
+    <color name="dark_gray">#2C3D63</color>
+    <color name="et_hint_grey">#5E5E5E</color>
+    <color name="nav_back_color">#75E8D7</color>
+    <color name="payu_primary">#74EBD5</color>
+
+    <color name="status_success">#81C842</color>
+    <color name="status_error">#FFAC1B</color>
+    <color name="status_fail">#FF5100</color>
+
+    <color name="darkGrey">#6E6C6C</color>
+    <color name="Grey">#B3B3B3</color>
+    <color name="black">#000000</color>
+    <color name="green_button">#7DDDE3</color>
+    <color name="grey_button">#838383</color>
+    <color name="compare_button_color">#00BFAD</color>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#293859</color>
+    <color name="colorAccent">#D81B60</color>
+
+    <color name="grey">#E9EAEE</color>
+    <color name="yellow">#F8BA0F</color>
+    <color name="goodgrey">#535353</color>
+    <color name="darkblue">#293859</color>
+    <color name="lightgrey">#EEEEEE</color>
+
+
+    <color name="light_sea_green">#31cb95</color>
+    <color name="bg_color">#C1CAD6</color>
+    <color name="textColor">#424242</color>
+    <color name="white_smoke">#eff0f0</color>
+    <color name="silver">#c8c8c8</color>
+    <color name="orange">#f7991b</color>
+
+    <color name="dark_late_gray">#2b3e50</color>
+
+    <color name="colorText">#504F60</color>
+
+    <color name="colorPrimary2">#FBB034</color>
+    <color name="colorPrimaryDark2">#FFDD00</color>
+    <color name="colorAccent2">#FBB034</color>
+
+    <color name="color_primary">#FFFFFF</color>
+    <color name="color_primary_dark">#1B1B1B</color>
+    <color name="primary_orange_color">#F8991D</color>
+    <color name="secondary_orange_color">#FF7676</color>
+    <color name="color_background">#16181D</color>
+    <color name="white_color">#FFFFFF</color>
+    <color name="black_color">#000000</color>
+    <color name="primary_grey_color">#ECEBEB</color>
+    <color name="secondary_grey_color">#B6B6B6</color>
+    <color name="red_accent_color">#FF0000</color>
+    <color name="transparent_color">#00000000</color>
+    <color name="overlay_color">#80000000</color>
+    <color name="gradient_color">#66000000</color>
+    <color name="gradient_overlay_color">#CC000000</color>
+    <color name="alert_dialog_background">#4C4E53</color>
+    <color name="primary_text_color">#FFFFFF</color>
+    <color name="secondary_text_color">#D7D7D7</color>
+
+    <!-- Chat Activity -->
+    <color name="localBackground">#827b92</color>
+    <color name="remoteBackground">#484258</color>
+    <color name="frameback">#00BFD9</color>
+
+</resources>

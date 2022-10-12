@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:cardCornerRadius="8dp"
+    android:backgroundTint="#EDFDFF"
+    android:layout_marginBottom="10dp"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:layout_marginTop="10dp"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <com.google.android.material.imageview.ShapeableImageView
+
+                android:id="@+id/profile_image"
+                app:shapeAppearance="@style/Rounded"
+                app:shapeAppearanceOverlay="@style/Rounded"
+                android:layout_width='60dp'
+                android:layout_height='60dp'
+                android:layout_margin="12dp"
+                style="@style/Rounded"
+                android:contentDescription='@string/app_name'
+                android:scaleType='fitXY'
+
+                android:src="@drawable/nprofile"
+                android:visibility='visible' />
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+
+                    android:id="@+id/fullname"
+                    android:textSize="14dp"
+                    android:fontFamily="@font/axiforma"
+                    android:textColor="@color/black"
+                    android:layout_height="wrap_content"
+                    android:text="Jarvis Pepperspray "/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_marginTop="7dp"
+
+                    android:textSize="12dp"
+                    android:id="@+id/location"
+                    android:fontFamily="@font/axiforma"
+                    android:layout_height="wrap_content"
+                    android:text="Parker, Colorado, CO "/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:textSize="12dp"
+
+                    android:layout_marginTop="2dp"
+                    android:id="@+id/date"
+                    android:fontFamily="@font/axiforma"
+                    android:layout_height="wrap_content"
+                    android:text="Date"/>
+
+            </LinearLayout>
+            <ImageView
+                android:id="@+id/threedots"
+                android:layout_width="4dp"
+                android:layout_height="20dp"
+                android:src="@drawable/three"
+                android:layout_marginLeft="150dp"
+                android:layout_marginTop="15dp">
+
+            </ImageView>
+
+        </LinearLayout>
+        <com.google.android.material.imageview.ShapeableImageView
+            android:layout_width='match_parent'
+            android:layout_height='160dp'
+            android:layout_margin="12dp"
+            android:id="@+id/postimage"
+            app:shapeAppearance="@style/Rounded"
+            app:shapeAppearanceOverlay="@style/Rounded"
+            android:contentDescription='@string/app_name'
+            android:scaleType='fitXY'
+            android:src='@drawable/nslide'
+            />
+        <VideoView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_margin="12dp"
+            android:padding='5sp'
+            android:scaleType='fitXY'
+            android:visibility="gone"
+            android:id="@+id/videoview"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/star_button"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginTop="10dp"
+                    app:icon_size="20dp"
+                    android:src="@drawable/iconlike" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/comments"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/messageicon2"/>
+                    <!--                        <TextView-->
+                    <!--                            android:layout_width="match_parent"-->
+                    <!--                            android:layout_gravity="center"-->
+                    <!--                            android:fontFamily="@font/axiforma"-->
+                    <!--                            android:layout_marginLeft="20dp"-->
+                    <!--                            android:text="Comments"-->
+                    <!--                            android:textColor="@color/black"-->
+                    <!--                            android:textSize="12sp"-->
+                    <!--                            android:layout_height="wrap_content"/>-->
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginLeft="20dp">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/likepostrecycler"
+                    android:layout_width="93dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    tools:listitem="@layout/postlikeitem">
+
+                </androidx.recyclerview.widget.RecyclerView>
+
+
+                <!--<ImageView
+                    android:id="@+id/likeimage1"
+                    style="@style/Rounded"
+                    android:layout_width='37dp'
+                    android:layout_height='37dp'
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginEnd="12dp"
+                    android:layout_marginBottom="12dp"
+                    android:scaleType='fitXY'
+                    android:src="@drawable/nprofile"
+                    android:visibility='visible'
+                    app:shapeAppearance="@style/Rounded"
+                    app:shapeAppearanceOverlay="@style/Rounded">
+
+                </ImageView>
+                <ImageView
+                    android:id="@+id/likeimage2"
+                    style="@style/Rounded"
+                    android:layout_width='37dp'
+                    android:layout_height='37dp'
+                    android:layout_marginStart="35dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginEnd="12dp"
+                    android:layout_marginBottom="12dp"
+                    android:scaleType='fitXY'
+                    android:src="@drawable/nprofile"
+                    android:visibility='visible'
+                    app:shapeAppearance="@style/Rounded"
+                    app:shapeAppearanceOverlay="@style/Rounded">
+                </ImageView>
+
+                <ImageView
+                    android:id="@+id/likeimage3"
+                    style="@style/Rounded"
+                    android:layout_width='37dp'
+                    android:layout_height='37dp'
+                    android:layout_marginStart="60dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginEnd="12dp"
+                    android:layout_marginBottom="12dp"
+                    android:scaleType='fitXY'
+                    android:src="@drawable/nprofile"
+                    android:visibility='visible'
+                    app:shapeAppearance="@style/Rounded"
+                    app:shapeAppearanceOverlay="@style/Rounded">
+
+                </ImageView>
+
+                <ImageView
+                    android:id="@+id/likeimage4"
+                    style="@style/Rounded"
+                    android:layout_width='37dp'
+                    android:layout_height='37dp'
+                    android:layout_marginStart="85dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginEnd="12dp"
+                    android:layout_marginBottom="12dp"
+                    android:scaleType='fitXY'
+                    android:src="@drawable/nprofile"
+                    android:visibility='visible'
+                    app:shapeAppearance="@style/Rounded"
+                    app:shapeAppearanceOverlay="@style/Rounded">
+
+                </ImageView>-->
+
+                <TextView
+                    android:id="@+id/likedt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="35dp"
+                   android:layout_marginLeft="90dp"
+                    android:layout_toEndOf="@+id/likepostrecycler"
+                    android:fontFamily="@font/axiforma"
+                    android:text="Liked by"
+                    android:textColor="#77838F"
+                    android:textSize="10dp">
+                </TextView>
+                <TextView
+                    android:id="@+id/likedname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/likedt"
+                    android:layout_marginLeft="3dp"
+                    android:textSize="10dp"
+                    android:fontFamily="@font/axiforma"
+                    android:text="name"
+                    android:textColor="#00BFD9"
+                    android:layout_marginTop="35dp">
+                </TextView>
+                <TextView
+                    android:id="@+id/likedand"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/likedname"
+                    android:layout_marginLeft="3dp"
+                    android:textSize="10dp"
+                    android:fontFamily="@font/axiforma"
+                    android:text="and"
+                    android:textColor="#77838F"
+                    android:layout_marginTop="35dp">
+                </TextView>
+                <TextView
+                    android:id="@+id/numoflikes"
+                    android:layout_width="wrap_content"
+                    android:fontFamily="@font/axiforma"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/likedand"
+                    android:layout_marginLeft="3dp"
+                    android:textColor="#00BFD9"
+                    android:textSize="10dp"
+                    android:text="Likes"
+                    android:layout_marginTop="35dp"/>
+                <TextView
+                    android:id="@+id/likedmore"
+                    android:layout_width="wrap_content"
+                    android:fontFamily="@font/axiforma"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/numoflikes"
+                    android:layout_marginLeft="2dp"
+                    android:textColor="#00BFD9"
+                    android:textSize="10dp"
+                    android:text="more"
+                    android:layout_marginTop="35dp"/>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/commentpostrecycler"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/commentspostrecycler"
+            tools:itemCount="1">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:orientation="horizontal">
+                <ImageView
+                    android:id="@+id/addcomment"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:src="@drawable/addcomment">
+                </ImageView>
+                <TextView
+                    android:id="@+id/taddcomment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="19dp"
+                    android:layout_marginLeft="5dp"
+                    android:text="Add Comment"
+                    android:textColor="#333333"
+                    android:fontFamily="@font/axiforma"
+                    android:textSize="14dp"
+                    >
+                </TextView>
+                <TextView
+                    android:id="@+id/viewallcomments"
+                    android:layout_width="wrap_content"
+                    android:layout_height="12dp"
+                    android:layout_marginLeft="80dp"
+                    android:text="View all Comments"
+                    android:textColor="#7FDEEB"
+                    android:fontFamily="@font/axiforma"
+                    android:textSize="9dp"
+                    >
+                </TextView>
+            </LinearLayout>
+        </LinearLayout>
+
+
+</com.google.android.material.card.MaterialCardView>

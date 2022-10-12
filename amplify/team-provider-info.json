@@ -1,0 +1,27 @@
+{
+  "preyank": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-preyank-preyank-111609-authRole",
+      "UnauthRoleArn": "arn:aws:iam::407303117763:role/amplify-preyank-preyank-111609-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::407303117763:role/amplify-preyank-preyank-111609-authRole",
+      "Region": "us-east-2",
+      "DeploymentBucketName": "amplify-preyank-preyank-111609-deployment",
+      "UnauthRoleName": "amplify-preyank-preyank-111609-unauthRole",
+      "StackName": "amplify-preyank-preyank-111609",
+      "StackId": "arn:aws:cloudformation:us-east-2:407303117763:stack/amplify-preyank-preyank-111609/9a0929b0-7b1a-11eb-b78e-0a895b109086",
+      "AmplifyAppId": "dmc6xpsf9njol"
+    },
+    "categories": {
+      "auth": {
+        "preyankb3f07430": {}
+      },
+      "notifications": {
+        "Pinpoint": {
+          "Name": "Health-preyank",
+          "Id": "12c99ea37a774d3e84bdb33ab0d36a0e",
+          "Region": "us-east-1"
+        }
+      }
+    }
+  }
+}

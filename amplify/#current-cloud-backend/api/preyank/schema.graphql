@@ -1,0 +1,515 @@
+type User @model
+ {
+  id: ID!
+  name: String!
+  userid:ID!
+  email: String!
+  message: [Message] @connection(keyName: "byMessagesUsers",fields: ["id"])
+  awsdate: String!
+  appointment: [Appointment] @connection(keyName: "byAppointment",fields: ["id"])
+  userdatabase : [UserDatabase] @connection(keyName: "byUserDatabase",fields: ["id"])
+  doctor : [Doctor] @connection(keyName: "bydoctor",fields: ["id"])
+  post : [Post] @connection(keyName: "byPost",fields: ["id"])
+
+}
+enum BookMarkType {
+BROADCAST ,
+DISCUSSIONGROUP,
+}
+
+type BookMark @model{
+  id:ID!
+  userid: ID!
+  bookmarktype : BookMarkType!
+  discussiongroupid: ID
+  livebroadcastingid: ID
+}
+
+type PaymentRequest @model
+{
+  id:ID!
+  PaymentRequestType : PaymentRequestType!
+  doctorID: ID!
+  date: AWSDateTime!
+  appointmentid: ID!
+  request:PaymenttoDoctor!
+  paidtodoctordate: AWSDateTime
+}
+type PackagesBuy @model {
+            id: ID!
+            doctorID: ID!
+            userID: ID!
+            numberofappointmentsused: String!
+            consultationfees: String!
+            conultationfesscurrency: String!
+            numofappointments: String!
+            validity: String!
+            date: AWSDateTime!
+            doctortype: DoctorType!
+            PaymentCompletionStatus: PaymentCompletionStatus!
+            PaymentMode:PaymentMode
+}
+
+type Packages @model{
+            id: ID!
+            doctorID: ID!
+            consultationfees: String!
+            conultationfesscurrency: String!
+            numofappointments: String!
+            validity: String!
+            doctortype: DoctorType!
+}
+
+type BroadCast @model{
+  id:ID!
+  doctorID: ID!
+  date: AWSDateTime!
+  name: String!
+  description: String!
+  doctortype: DoctorType!
+  BroadCastStatus: BroadCastStatus!
+}
+
+
+type Communities @model{
+            id: ID!
+            communityname: String!
+            communityowner: ID!
+            description: String!
+}
+
+type ContactUs @model
+{
+id: ID!
+userid: ID!
+date: AWSDateTime!
+title:String !
+description : String !
+}
+type Notifications @model
+{
+id: ID!
+meetingid: ID!
+request : Request!
+userid: ID!
+date: AWSDateTime!
+doctorid: ID!
+}
+type PaymentfromWallet @model
+{
+id: ID!
+amount: String!
+currency : String!
+date: AWSDateTime!
+paymentfrom: ID!
+
+}
+type PaymentforWallet @model
+{
+id: ID!
+amount: String!
+currency : String!
+date: AWSDateTime!
+paymentfrom: ID!
+
+}
+
+type PaymentforAppointment @model
+{
+id: ID!
+amount: String!
+paymentfrom: ID!
+currency : String!
+date: AWSDateTime!
+paymentto: ID!
+appointmentid : ID!
+}
+
+type WellnessPost @model
+{
+id: ID!
+title: String!
+image: Boolean!
+date: AWSDateTime!
+description: String!
+
+}
+
+type Post @model
+@key(name: "byPost", fields: ["UserID"])
+{
+
+id: ID!
+UserID: ID!
+postidreference :ID!
+PostType: PostType!
+title: String!
+image: Boolean!
+date: AWSDateTime!
+description: String!
+numberoflikes: String!
+imagetype:VideoType
+DoctorType: DoctorType
+likedbyusers: [Likes] @connection(keyName: "byLikes",fields: ["id"])
+comments: [Comments] @connection(keyName: "byComments",fields: ["id"])
+}
+
+type Likes @model
+@key(name: "byLikes", fields: ["PostID"])
+{
+id: ID!
+PostID: ID!
+date: AWSDateTime!
+UserId: ID!
+}
+
+type Comments @model
+
+@key(name: "byComments", fields: ["PostID"])
+{
+id: ID!
+PostID: ID!
+UserId: ID!
+date: AWSDateTime !
+comment: String!
+commentfrom: UserType!
+}
+enum UserType{
+USER,
+DOCTOR,
+COACH
+}
+
+type ReplyComments @model
+{
+id: ID!
+PostID: ID!
+UserId: ID!
+comment: String!
+date: AWSDateTime!
+commentfrom: UserType!
+}
+
+type Report @model
+{
+  id:ID!
+  userID: ID!
+  doctorID: ID
+  meetingid: ID
+  reoporttype: ReportType!
+  date: AWSDateTime!
+  summnaryname: String
+  summarydosage: String
+  summnaryinstr: String
+  summnaryreason: String
+  rxname: String
+  rxdosage: String
+  rxinstr: String
+  rxreason: String
+  labsname: String
+  labsdosage: String
+  labsinstr: String
+  labsreason: String
+  visitnotes:String
+
+ }
+type CoachPrescTask @model
+{
+  id:ID!
+  userID: ID!
+  doctorID: ID!
+  meetingid: ID!
+  weekday: WeekDay!
+  task: String!
+  date: AWSDateTime!
+}
+type ReportsShared @model
+{
+  id:ID!
+  userID: ID!
+  doctorID: ID!
+  meetingid: String!
+  date: AWSDateTime!
+ }
+
+
+type Appointment @model
+@key(name:"byAppointment", fields: ["userID"])
+@key(name: "byAppointmentID", fields: ["doctorID"])
+{
+  id:ID!
+  userID: ID!
+  doctorID: ID!
+  paymentMode: PaymentMode
+  packagebuyid: ID
+  consultationfees: String!
+  PaymentCompletionStatus: PaymentCompletionStatus!
+  conultationfesscurrency: String!
+  starttime: String!
+  slottime:String!
+  date:AWSDateTime!
+  meetingid: ID!
+  status: Status!
+  request: Request!
+  message: String
+  personalConsult: Boolean
+  videoconsult:Boolean
+  cancelledbyuser:Boolean
+  cancellationdate:AWSDateTime
+  cancelledbydoctor:Boolean
+  doctortype: DoctorType!
+
+}
+
+type CommunityMessage @model {
+ id: ID!
+ communityid : ID!
+ messagefrom : ID!
+ date: AWSDateTime!
+ content: String!
+ messagetype: MessageType!
+
+}
+
+type Message @model
+@key(name: "byMessagesUsers", fields: ["UserID"])
+@key(name: "byMessagesdoctors", fields: ["DoctorsID"])
+ {
+    id: ID!
+    DoctorsID: ID!
+    UserID: ID!
+    messagetype: MessageType!
+    content: String
+    currentmessage: ID!
+    readbydoctor: Boolean!
+    imageboolean:Boolean!
+    readbyuser: Boolean!
+    date: AWSDateTime
+}
+
+
+
+type UserDatabase @model
+@key(name: "byUserDatabase", fields: ["UserID"])
+ {
+  id: ID!
+  UserID: ID!
+  name: String
+  lastname: String
+  sex: String
+  birthday: String
+  hieght:String
+  weight: String
+  emailaddress: String
+  phonenumber: String
+  emergencycontact:String
+  streetaddress: String
+  city:String
+  zipcode:String
+  smoke:String
+  alchol:String
+  date: AWSDateTime
+}
+
+type Allergies @model
+{
+id: ID!
+userid: ID!
+allergyname :String!
+description:String!
+
+}
+type Experience @model
+@key(name: "byexpID", fields: ["doctorID"])
+{   id: ID!
+    doctorID: ID!
+    Title: String!
+    CompanyName:String!
+    location: String!
+    doctortype: DoctorType!
+    Description: String!
+    startdate: String!
+    enddate: String!
+}
+ type Doctor @model
+ @key(name: "bydoctor", fields: ["UserID"])
+ {
+  id: ID!
+  UserID: ID!
+  doctortype: DoctorType!
+  name: String
+  about: String
+  npi: String
+  languagesspoken: String
+  country: String
+  localaddress: String
+  paycut:String!
+  state:String
+  zipcode:String
+  specialization: String
+  yearsofexxperience: String
+  gender: String
+  status:DoctorProfileReview!
+  insurance: String
+  offlineconsultation : Boolean
+  appointmentscompleted: String!
+  viewsonprofile: String!
+  education: [Education] @connection(keyName: "byEducation",fields: ["id"])
+  experience: [Experience] @connection(keyName: "byexpID",fields: ["id"])
+  certificates: [Certificates] @connection(keyName: "byCertificatesdoc",fields: ["id"])
+  appointment: [Appointment] @connection(keyName: "byAppointmentID",fields: ["id"])
+  message: [Message] @connection(keyName: "byMessagesdoctors",fields: ["id"])
+
+}
+type Certificates @model
+@key(name: "byCertificatesdoc", fields: ["doctorID"])
+{
+   id: ID!
+   doctorID: ID!
+   imageurl:String!
+   description: String!
+   doctortype: DoctorType!
+
+}
+type Slots @model
+          {
+            id: ID!
+            doctorID: ID!
+            consulttime: String!
+            starttime: String!
+            endtime: String!
+            consultationfees: String!
+            conultationfesscurrency: String!
+            videoconsultations: Boolean!
+            inpersonconsultation: Boolean!
+            videoandinpersonconsultation: Boolean!
+            consultationtimeedit: String!
+            monday:Boolean!
+            tuesday: Boolean!
+            wednesday:Boolean!
+            thursday:Boolean!
+            friday:Boolean!
+            saturday:Boolean!
+            sunday:Boolean!
+            activeinactive:SlotActiveInactive
+            doctortype: DoctorType!
+
+
+            }
+
+type Invite @model
+{   id: ID!
+    doctorID: ID!
+    UserID : ID!
+    message:String!
+    invite: Request!
+    date: AWSDateTime!
+}
+
+type Education @model
+@key(name: "byEducation", fields: ["doctorID"])
+{   id: ID!
+    doctorID: ID!
+    nameofuniversity: String!
+    fieldofstudy: String!
+    doctortype: DoctorType!
+    degree:String!
+    startdate:String!
+    enddate:String!
+    gradepoint:String
+
+}
+
+
+
+
+enum Status{
+    PENDING,
+    DONE,
+    CANCELLED
+}
+enum Privacy{
+    PRIVATE,
+    UNLOCKED,
+}
+
+enum  ReportType{
+    HARDCOPY,
+    DIGITAL,
+    PERSONAL
+}
+
+enum Request{
+   REQUESTED,
+     CONFIRMED,
+     CANCELLED,
+     REJECTED
+}
+enum  MessageType{
+     IMAGE,
+     TEXT,
+}
+
+enum DoctorProfileReview{
+      UNDERREVIEW,
+      PUBLISHED,
+      SUBMITTED,
+      REJECTED
+}
+enum PaymenttoDoctor{
+   GIVEN,
+   UNDERREVIEW
+}
+enum SlotActiveInactive {
+ACTIVE,
+INACTIVE,
+}
+enum DoctorType {
+DOCTOR,
+COACH,
+}
+enum PaymentMode {
+STRIPE,
+PACKAGE,
+BALANCE,
+}
+
+enum PackageType {
+COMMUNICATION,
+APPOINTMENTS,
+}
+
+enum PaymentCompletionStatus {
+PAYMENTCOMPLETED,
+PAYMENTNOTCOMPLETED,
+}
+
+enum WeekDay{
+Monday,
+Tuesday ,
+Wednesday ,
+Thursday,
+Friday,
+Saturday ,
+Sunday,
+}
+
+enum PostType{
+NormalPost,
+LearningsWellnesPost ,
+}
+
+enum PaymentRequestType{
+PACKAGES,
+APPOINTMENT,
+}
+
+enum VideoType{
+VIDEO,
+IMAGE,
+}
+
+enum BroadCastStatus {
+LIVE ,
+NOTLIVE,
+}

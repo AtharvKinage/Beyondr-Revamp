@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="local_preview_margin_top">28dp</dimen>
+    <dimen name="local_preview_margin_right">24dp</dimen>
+    <dimen name="button_radius">20dp</dimen>
+    <dimen name="button_height">55dp</dimen>
+    <dimen name="app_padding">15dp</dimen>
+    <dimen name="onboard_dot">12dp</dimen>
+    <!-- buttons -->
+    <dimen name="call_button_size">60dp</dimen>
+    <dimen name="other_button_size">54dp</dimen>
+    <dimen name="local_preview_width">112dp</dimen>
+    <dimen name="local_preview_height">150dp</dimen>
+    <dimen name="local_back_icon_size">48dp</dimen>
+    <dimen name="remote_back_icon_size">80dp</dimen>
+    <dimen name="remote_back_icon_margin_bottom">100dp</dimen>
+
+    <!-- buttons -->
+    <dimen name="control_bottom_margin">40dp</dimen>
+    <dimen name="live_room_bg_icon_size">16dp</dimen>
+    <dimen name="role_block_corner">16dp</dimen>
+    <dimen name="control_bottom_horizontal_margin">16dp</dimen>
+    <dimen name="medium">8dp</dimen>
+    <dimen name="large">16dp</dimen>
+    <dimen name="xlarge">24dp</dimen>
+
+
+</resources>

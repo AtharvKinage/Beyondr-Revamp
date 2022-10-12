@@ -1,0 +1,610 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@drawable/blurimage"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:onClick="back"
+                android:gravity="center"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/back"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:layout_marginLeft="20dp"
+                android:layout_gravity="center"
+                android:fontFamily="@font/nunito_bold"
+                android:textColor="@color/black"
+                android:text="Add Health Record  "/>
+        </LinearLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="20dp"
+
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_marginTop="20dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:background="@drawable/rectangle">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    app:cardCornerRadius="8dp"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:backgroundTint="#7FDEEB"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:text=" Date "
+                        android:gravity="center"
+                        android:layout_marginLeft="20dp"
+                        android:fontFamily="@font/axiforma"
+                        android:textColor="@color/white"
+                        android:textSize="13dp"
+
+                        />
+                </com.google.android.material.card.MaterialCardView>
+
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="20dp"
+                    android:backgroundTint="#F6F7F9"
+                    android:background="@drawable/button_gray"
+                    android:layout_marginRight="20dp"
+                    android:layout_height="wrap_content">
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:minHeight="50dp"
+                        android:layout_marginLeft="20dp"
+                        android:id="@+id/date"
+                        android:textSize="13dp"
+                        android:fontFamily="@font/axiforma"
+                        android:background="@null"
+                        android:textColor="#6C6C6C"
+                        android:textColorHint="#6C6C6C"
+                        android:layout_height="wrap_content">
+
+                    </EditText>
+
+                </FrameLayout>
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    app:cardCornerRadius="8dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:backgroundTint="#7FDEEB"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp"
+                        android:text="Summary "
+
+                        android:layout_marginLeft="20dp"
+                        android:fontFamily="@font/axiforma"
+                        android:layout_marginTop="10dp"
+
+                        android:textColor="@color/white"
+                        android:textSize="13dp"
+
+                        />
+                </com.google.android.material.card.MaterialCardView>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Name"
+                    android:layout_marginLeft="30dp"
+                    android:fontFamily="@font/axiforma"
+                    android:layout_marginTop="10dp"
+                    android:textColor="#B7B7B7"
+                    android:textSize="13dp"
+
+                    />
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:backgroundTint="#F6F7F9"
+                    android:background="@drawable/button_gray"
+                    android:layout_marginRight="20dp"
+                    android:layout_height="wrap_content">
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:minHeight="50dp"
+                        android:layout_marginLeft="20dp"
+                        android:textSize="13dp"
+                        android:id="@+id/name"
+
+                        android:fontFamily="@font/axiforma"
+                        android:background="@null"
+                        android:textColor="#6C6C6C"
+                        android:textColorHint="#6C6C6C"
+                        android:layout_height="wrap_content">
+
+                    </EditText>
+
+                </FrameLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Dosage"
+                    android:layout_marginLeft="30dp"
+                    android:fontFamily="@font/axiforma"
+                    android:layout_marginTop="10dp"
+                    android:textColor="#B7B7B7"
+                    android:textSize="13dp"
+
+                    />
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:backgroundTint="#F6F7F9"
+                    android:background="@drawable/button_gray"
+                    android:layout_marginRight="20dp"
+                    android:layout_height="wrap_content">
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:minHeight="50dp"
+                        android:layout_marginLeft="20dp"
+                        android:textSize="13dp"
+                        android:fontFamily="@font/axiforma"
+                        android:background="@null"
+                        android:textColor="#6C6C6C"
+                        android:id="@+id/dosage"
+                        android:textColorHint="#6C6C6C"
+                        android:layout_height="wrap_content">
+
+                    </EditText>
+
+                </FrameLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Instruction"
+                    android:layout_marginLeft="30dp"
+                    android:fontFamily="@font/axiforma"
+                    android:layout_marginTop="10dp"
+                    android:textColor="#B7B7B7"
+                    android:textSize="13dp"
+
+                    />
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:backgroundTint="#F6F7F9"
+                    android:background="@drawable/button_gray"
+                    android:layout_marginRight="20dp"
+                    android:layout_height="wrap_content">
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:minHeight="50dp"
+                        android:layout_marginLeft="20dp"
+                        android:textSize="13dp"
+                        android:id="@+id/instruction"
+                        android:fontFamily="@font/axiforma"
+                        android:background="@null"
+                        android:textColor="#6C6C6C"
+                        android:textColorHint="#6C6C6C"
+
+                        android:layout_height="wrap_content">
+
+                    </EditText>
+
+                </FrameLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Reason"
+                    android:layout_marginLeft="30dp"
+                    android:fontFamily="@font/axiforma"
+                    android:layout_marginTop="10dp"
+                    android:textColor="#B7B7B7"
+                    android:textSize="13dp"
+
+                    />
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:backgroundTint="#F6F7F9"
+                    android:background="@drawable/button_gray"
+                    android:layout_marginRight="20dp"
+                    android:layout_height="wrap_content">
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:minHeight="50dp"
+                        android:layout_marginLeft="20dp"
+                        android:textSize="13dp"
+                        android:fontFamily="@font/axiforma"
+                        android:background="@null"
+                        android:id="@+id/reason"
+                        android:textColor="#6C6C6C"
+                        android:textColorHint="#6C6C6C"
+                        android:layout_height="wrap_content">
+
+                    </EditText>
+
+                </FrameLayout>
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    app:cardCornerRadius="8dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:backgroundTint="#7FDEEB"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp"
+                        android:text="RX "
+
+                        android:layout_marginLeft="20dp"
+                        android:fontFamily="@font/axiforma"
+                        android:layout_marginTop="10dp"
+
+                        android:textColor="@color/white"
+                        android:textSize="13dp"
+
+                        />
+                </com.google.android.material.card.MaterialCardView>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Name"
+                    android:layout_marginLeft="30dp"
+                    android:fontFamily="@font/axiforma"
+                    android:layout_marginTop="10dp"
+                    android:textColor="#B7B7B7"
+                    android:textSize="13dp"
+
+                    />
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:backgroundTint="#F6F7F9"
+                    android:background="@drawable/button_gray"
+                    android:layout_marginRight="20dp"
+                    android:layout_height="wrap_content">
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:minHeight="50dp"
+                        android:layout_marginLeft="20dp"
+                        android:textSize="13dp"
+                        android:fontFamily="@font/axiforma"
+                        android:background="@null"
+                        android:textColor="#6C6C6C"
+                        android:id="@+id/rxname"
+                        android:textColorHint="#6C6C6C"
+                        android:layout_height="wrap_content">
+
+                    </EditText>
+
+                </FrameLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Dosage"
+                    android:layout_marginLeft="30dp"
+                    android:fontFamily="@font/axiforma"
+                    android:layout_marginTop="10dp"
+                    android:textColor="#B7B7B7"
+                    android:textSize="13dp"
+
+                    />
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:backgroundTint="#F6F7F9"
+                    android:background="@drawable/button_gray"
+                    android:layout_marginRight="20dp"
+                    android:layout_height="wrap_content">
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:minHeight="50dp"
+                        android:layout_marginLeft="20dp"
+                        android:id="@+id/rxdosage"
+                        android:textSize="13dp"
+                        android:fontFamily="@font/axiforma"
+                        android:background="@null"
+                        android:textColor="#6C6C6C"
+                        android:textColorHint="#6C6C6C"
+                        android:layout_height="wrap_content">
+
+                    </EditText>
+
+                </FrameLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Instruction"
+                    android:layout_marginLeft="30dp"
+                    android:fontFamily="@font/axiforma"
+                    android:layout_marginTop="10dp"
+                    android:textColor="#B7B7B7"
+                    android:textSize="13dp"
+
+                    />
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:backgroundTint="#F6F7F9"
+                    android:background="@drawable/button_gray"
+                    android:layout_marginRight="20dp"
+                    android:layout_height="wrap_content">
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:minHeight="50dp"
+                        android:layout_marginLeft="20dp"
+                        android:textSize="13dp"
+                        android:id="@+id/rxinstr"
+                        android:fontFamily="@font/axiforma"
+                        android:background="@null"
+                        android:textColor="#6C6C6C"
+                        android:textColorHint="#6C6C6C"
+                        android:layout_height="wrap_content">
+
+                    </EditText>
+
+                </FrameLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Reason"
+                    android:layout_marginLeft="30dp"
+                    android:fontFamily="@font/axiforma"
+                    android:layout_marginTop="10dp"
+                    android:textColor="#B7B7B7"
+                    android:textSize="13dp"
+
+                    />
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:backgroundTint="#F6F7F9"
+                    android:background="@drawable/button_gray"
+                    android:layout_marginRight="20dp"
+                    android:layout_height="wrap_content">
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:minHeight="50dp"
+                        android:id="@+id/rxreason"
+                        android:layout_marginLeft="20dp"
+                        android:textSize="13dp"
+                        android:fontFamily="@font/axiforma"
+                        android:background="@null"
+                        android:textColor="#6C6C6C"
+                        android:textColorHint="#6C6C6C"
+                        android:layout_height="wrap_content">
+
+                    </EditText>
+
+                </FrameLayout>
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    app:cardCornerRadius="8dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:backgroundTint="#7FDEEB"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp"
+                        android:text="Labs"
+
+                        android:layout_marginLeft="20dp"
+                        android:fontFamily="@font/axiforma"
+                        android:layout_marginTop="10dp"
+
+                        android:textColor="@color/white"
+                        android:textSize="13dp"
+
+                        />
+                </com.google.android.material.card.MaterialCardView>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Name"
+                    android:layout_marginLeft="30dp"
+                    android:fontFamily="@font/axiforma"
+                    android:layout_marginTop="10dp"
+                    android:textColor="#B7B7B7"
+                    android:textSize="13dp"
+
+                    />
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:backgroundTint="#F6F7F9"
+                    android:background="@drawable/button_gray"
+                    android:layout_marginRight="20dp"
+                    android:layout_height="wrap_content">
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:minHeight="50dp"
+                        android:layout_marginLeft="20dp"
+                        android:textSize="13dp"
+                        android:fontFamily="@font/axiforma"
+                        android:background="@null"
+                        android:id="@+id/labsname"
+                        android:textColor="#6C6C6C"
+                        android:textColorHint="#6C6C6C"
+                        android:layout_height="wrap_content">
+
+                    </EditText>
+
+                </FrameLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Dosage"
+                    android:layout_marginLeft="30dp"
+                    android:fontFamily="@font/axiforma"
+                    android:layout_marginTop="10dp"
+                    android:textColor="#B7B7B7"
+                    android:textSize="13dp"
+
+                    />
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:backgroundTint="#F6F7F9"
+                    android:background="@drawable/button_gray"
+                    android:layout_marginRight="20dp"
+                    android:layout_height="wrap_content">
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:minHeight="50dp"
+                        android:layout_marginLeft="20dp"
+                        android:textSize="13dp"
+                        android:fontFamily="@font/axiforma"
+                        android:background="@null"
+                        android:id="@+id/labsdosage"
+                        android:textColor="#6C6C6C"
+                        android:textColorHint="#6C6C6C"
+                        android:layout_height="wrap_content">
+
+                    </EditText>
+
+                </FrameLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Instruction"
+                    android:layout_marginLeft="30dp"
+                    android:fontFamily="@font/axiforma"
+                    android:layout_marginTop="10dp"
+                    android:textColor="#B7B7B7"
+                    android:textSize="13dp"
+
+                    />
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:backgroundTint="#F6F7F9"
+                    android:background="@drawable/button_gray"
+                    android:layout_marginRight="20dp"
+                    android:layout_height="wrap_content">
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:minHeight="50dp"
+                        android:layout_marginLeft="20dp"
+                        android:textSize="13dp"
+                        android:fontFamily="@font/axiforma"
+                        android:background="@null"
+                        android:textColor="#6C6C6C"
+                        android:id="@+id/labsinstr"
+                        android:textColorHint="#6C6C6C"
+                        android:layout_height="wrap_content">
+
+                    </EditText>
+
+                </FrameLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Reason"
+                    android:layout_marginLeft="30dp"
+                    android:fontFamily="@font/axiforma"
+                    android:layout_marginTop="10dp"
+                    android:textColor="#B7B7B7"
+                    android:textSize="13dp"
+
+                    />
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:backgroundTint="#F6F7F9"
+                    android:background="@drawable/button_gray"
+                    android:layout_marginRight="20dp"
+                    android:layout_height="wrap_content">
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:minHeight="50dp"
+                        android:id="@+id/labsreason"
+                        android:layout_marginLeft="20dp"
+                        android:textSize="13dp"
+                        android:fontFamily="@font/axiforma"
+                        android:background="@null"
+                        android:textColor="#6C6C6C"
+                        android:textColorHint="#6C6C6C"
+                        android:layout_height="wrap_content">
+
+                    </EditText>
+
+                </FrameLayout>
+                <android.widget.Button
+                    android:id="@+id/button"
+                    style="@style/buttonStyle"
+                    android:fontFamily="@font/axiforma"
+                    android:layout_above="@+id/button2"
+                    android:layout_width="match_parent"
+                    android:layout_marginBottom="15dp"
+                    android:onClick="onsaveclick"
+                    android:layout_marginTop="10dp"
+                    android:layout_height="@dimen/button_height"
+                    android:text="Add"
+                    android:layout_alignParentBottom="true"
+                    app:layout_constraintBottom_toTopOf="@+id/button2" />
+            </LinearLayout>
+
+            <ProgressBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/p"
+                android:visibility="gone"
+                android:layout_centerInParent="true"/>
+        </RelativeLayout>
+
+    </LinearLayout>
+</ScrollView>

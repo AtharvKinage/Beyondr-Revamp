@@ -1,0 +1,14 @@
+{
+    "CreateAPIKey": 0,
+    "AppSyncApiName": "preyank",
+    "DynamoDBBillingMode": "PAY_PER_REQUEST",
+    "DynamoDBEnableServerSideEncryption": false,
+    "AuthCognitoUserPoolId": {
+        "Fn::GetAtt": [
+            "authpreyankb3f07430",
+            "Outputs.UserPoolId"
+        ]
+    },
+    "S3DeploymentBucket": "amplify-preyank-preyank-111609-deployment",
+    "S3DeploymentRootKey": "amplify-appsync-files/376abd06dd8ccd1ac729abf0ef5790204011702f"
+}

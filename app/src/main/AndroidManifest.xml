@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.innovations.beyondr">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:name=".Common.App"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Beyondr">
+        <activity android:name=".Prescription"></activity>
+        <activity android:name=".Payment" />
+        <activity android:name=".ChatActivity" />
+        <activity android:name=".DiscussionGroup" />
+        <activity android:name=".CalendarActivity" />
+        <activity android:name=".ChooseYourPackage" />
+        <activity android:name=".WalletActivity" />
+        <activity android:name=".Activity.User.PackageTeamActivity" />
+        <activity android:name=".Activity.User.CoachesPackagesActivity" />
+        <activity android:name=".Activity.User.DoctorsPackagesActivity" />
+        <activity android:name=".Activity.User.AppointmentBookActivity" />
+        <activity android:name=".Activity.User.DoctorProfilebyBookAnAppointment" />
+        <activity android:name=".Activity.User.CommentsActivity" />
+        <activity android:name=".Activity.User.LikesActivity" />
+        <activity android:name=".Activity.Doctor.DoctorDatabase3" />
+        <activity android:name=".Activity.Doctor.DoctorProfileSubmittedActivity" />
+        <activity android:name=".Activity.User.UserProfileActivity" />
+        <activity android:name=".Activity.User.CalendarActivityUser" />
+        <activity android:name=".Activity.User.InvitesActivity" />
+        <activity android:name=".Activity.Doctor.IntroActivity" />
+        <activity android:name=".Activity.User.ContactUsActivity" />
+        <activity android:name=".Activity.User.NotificationsActivityUser" />
+        <activity
+            android:name=".Activity.Login.LoginActivity"
+            android:launchMode="singleTop" />
+        <activity android:name=".Activity.Login.EnterasaDoctorUserCoachActivity" />
+        <activity
+            android:name=".Activity.Login.SignUpActivity"
+            android:launchMode="singleTop" />
+        <activity android:name=".Activity.Login.ConfirmOTPActivity" />
+        <activity android:name=".Activity.Doctor.MainScreenDoc" />
+        <activity android:name=".Activity.User.AddAllergies" />
+        <activity android:name=".Activity.User.AddHealthRecordActivity" />
+        <activity android:name=".Activity.User.UserDatabase" />
+        <activity android:name=".Activity.User.MainScreenUser" />
+        <activity android:name=".Activity.Login.TakeaTourActivity" />
+        <activity android:name=".SplashScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

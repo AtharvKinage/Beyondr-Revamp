@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/athar/.gradle/caches/transforms-2/files-2.1/5251f34fa0b14f1bb1c885cdc621db78/jetified-currency-picker-android-1.2.1/res/drawable-anydpi-v21/ic_search.xml" value="0.23425925925925925" />
+        <entry key="..\:/Users/athar/.gradle/caches/transforms-2/files-2.1/f956e5c7c7346108f57896bcb62afadd/jetified-ImageSlideshow-0.1.0/res/drawable/default_selected_dot.xml" value="0.26615384615384613" />
+        <entry key="..\:/Users/athar/.gradle/caches/transforms-2/files-2.1/f956e5c7c7346108f57896bcb62afadd/jetified-ImageSlideshow-0.1.0/res/drawable/default_unselected_dot.xml" value="0.26615384615384613" />
+        <entry key="..\:/Users/athar/AndroidStudioProjects/Beyondr-REVAMP-JULY/app/src/main/res/drawable/activity_user_database_contact.xml" value="0.26615384615384613" />
+        <entry key="..\:/Users/athar/AndroidStudioProjects/Beyondr-REVAMP-JULY/app/src/main/res/drawable/bg_button.xml" value="0.23796296296296296" />
+        <entry key="..\:/Users/athar/AndroidStudioProjects/Beyondr-REVAMP-JULY/app/src/main/res/drawable/bg_search.xml" value="0.23425925925925925" />
+        <entry key="..\:/Users/athar/AndroidStudioProjects/Beyondr-REVAMP-JULY/app/src/main/res/drawable/button_blue.xml" value="0.262037037037037" />
+        <entry key="..\:/Users/athar/AndroidStudioProjects/Beyondr-REVAMP-JULY/app/src/main/res/drawable/button_circle_fill.xml" value="0.26615384615384613" />
+        <entry key="..\:/Users/athar/AndroidStudioProjects/Beyondr-REVAMP-JULY/app/src/main/res/drawable/button_circle_outline.xml" value="0.26615384615384613" />
+        <entry key="..\:/Users/athar/AndroidStudioProjects/Beyondr-REVAMP-JULY/app/src/main/res/drawable/button_gray.xml" value="0.26615384615384613" />
+        <entry key="..\:/Users/athar/AndroidStudioProjects/Beyondr-REVAMP-JULY/app/src/main/res/drawable/button_white.xml" value="0.26615384615384613" />
+        <entry key="..\:/Users/athar/AndroidStudioProjects/Beyondr-REVAMP-JULY/app/src/main/res/drawable/buttonimg.xml" value="0.26615384615384613" />
+        <entry key="..\:/Users/athar/AndroidStudioProjects/Beyondr-REVAMP-JULY/app/src/main/res/drawable/customchip.xml" value="0.26615384615384613" />
+        <entry key="..\:/Users/athar/AndroidStudioProjects/Beyondr-REVAMP-JULY/app/src/main/res/drawable/customradio.xml" value="0.26615384615384613" />
+        <entry key="..\:/Users/athar/AndroidStudioProjects/Beyondr-REVAMP-JULY/app/src/main/res/drawable/ic_baseline_search_24.xml" value="0.23425925925925925" />
+        <entry key="..\:/Users/athar/AndroidStudioProjects/Beyondr-REVAMP-JULY/app/src/main/res/drawable/ic_profile.xml" value="0.24259259259259258" />
+        <entry key="..\:/Users/athar/AndroidStudioProjects/Beyondr-REVAMP-JULY/app/src/main/res/drawable/ic_search.xml" value="0.23425925925925925" />
+        <entry key="..\:/Users/athar/AndroidStudioProjects/Beyondr-REVAMP-JULY/app/src/main/res/drawable/outline.xml" value="0.26615384615384613" />
+        <entry key="..\:/Users/athar/AndroidStudioProjects/Beyondr-REVAMP-JULY/app/src/main/res/drawable/top_left_right_rounded_grad_background.xml" value="0.26615384615384613" />
+        <entry key="..\:/Users/athar/AndroidStudioProjects/Beyondr-REVAMP-JULY/app/src/main/res/drawable/white_rounded_shape.xml" value="0.26615384615384613" />
+        <entry key="..\:/Users/athar/AndroidStudioProjects/Beyondr-REVAMP-JULY/app/src/main/res/drawable/whiteframe.xml" value="0.262037037037037" />
+        <entry key="..\:/Users/athar/AndroidStudioProjects/Beyondr-REVAMP-JULY/app/src/main/res/layout/activity_add_allergies.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/athar/AndroidStudioProjects/Beyondr-REVAMP-JULY/app/src/main/res/layout/activity_add_health_record.xml" value="0.19882246376811594" />
+        <entry key="..\:/Users/athar/AndroidStudioProjects/Beyondr-REVAMP-JULY/app/src/main/res/layout/activity_addnewslot.xml" value="0.264" />
+        <entry key="..\:/Users/athar/AndroidStudioProjects/Beyondr-REVAMP-JULY/app/src/main/res/layout/activity_appointment_book.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/athar/AndroidStudioProjects/Beyondr-REVAMP-JULY/app/src/main/res/layout/activity_broad_cast.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/athar/AndroidStudioProjects/Beyondr-REVAMP-JULY/app/src/main/res/layout/activity_broad_caster.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/athar/AndroidStudioProjects/Beyondr-REVAMP-JULY/app/src/main/res/layout/activity_calendar_user.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/athar/AndroidStudioProjects/Beyondr-REVAMP-JULY/app/src/main/res/layout/activity_chat.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/athar/AndroidStudioProjects/Beyondr-REVAMP-JULY/app/src/main/res/layout/activity_coaches_packages.xml" value="0.19882246376811594" />
+        <entry key="..\:/Users/athar/AndroidStudioProjects/Beyondr-REVAMP-JULY/app/src/main/res/layout/activity_contact_us.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/athar/AndroidStudioProjects/Beyondr-REVAMP-JULY/app/src/main/res/layout/activity_discussion_group.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/athar/AndroidStudioProjects/Beyondr-REVAMP-JULY/app/src/main/res/layout/activity_doctor_database1.xml" value="0.264" />
+        <entry key="..\:/Users/athar/AndroidStudioProjects/Beyondr-REVAMP-JULY/app/src/main/res/layout/activity_doctor_database2.xml" value="0.264" />
+        <entry key="..\:/Users/athar/AndroidStudioProjects/Beyondr-REVAMP-JULY/app/src/main/res/layout/activity_doctor_database3.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/athar/AndroidStudioProjects/Beyondr-REVAMP-JULY/app/src/main/res/layout/activity_doctor_profile_submitted.xml" value="0.19882246376811594" />
+        <entry key="..\:/Users/athar/AndroidStudioProjects/Beyondr-REVAMP-JULY/app/src/main/res/layout/activity_doctor_profileby_book_an_appointment.xml" value="0.264" />
+        <entry key="..\:/Users/athar/AndroidStudioProjects/Beyondr-REVAMP-JULY/app/src/main/res/layout/activity_doctors_packages.xml" value="0.19882246376811594" />
+        <entry key="..\:/Users/athar/AndroidStudioProjects/Beyondr-REVAMP-JULY/app/src/main/res/layout/activity_enterasa_doctor_user_coach.xml" value="0.264" />
+        <entry key="..\:/Users/athar/AndroidStudioProjects/Beyondr-REVAMP-JULY/app/src/main/res/layout/activity_intro.xml" value="0.264" />
+        <entry key="..\:/Users/athar/AndroidStudioProjects/Beyondr-REVAMP-JULY/app/src/main/res/layout/activity_invites.xml" value="0.2391304347826087" />
+        <entry key="..\:/Users/athar/AndroidStudioProjects/Beyondr-REVAMP-JULY/app/src/main/res/layout/activity_live_room.xml" value="0.2115036231884058" />
+        <entry key="..\:/Users/athar/AndroidStudioProjects/Beyondr-REVAMP-JULY/app/src/main/res/layout/activity_login.xml" value="0.2115036231884058" />
+        <entry key="..\:/Users/athar/AndroidStudioProjects/Beyondr-REVAMP-JULY/app/src/main/res/layout/activity_main_screen_doc.xml" value="0.264" />
+        <entry key="..\:/Users/athar/AndroidStudioProjects/Beyondr-REVAMP-JULY/app/src/main/res/layout/activity_main_screen_user.xml" value="0.264" />
+        <entry key="..\:/Users/athar/AndroidStudioProjects/Beyondr-REVAMP-JULY/app/src/main/res/layout/activity_messages.xml" value="0.264" />
+        <entry key="..\:/Users/athar/AndroidStudioProjects/Beyondr-REVAMP-JULY/app/src/main/res/layout/activity_notifications.xml" value="0.264" />
+        <entry key="..\:/Users/athar/AndroidStudioProjects/Beyondr-REVAMP-JULY/app/src/main/res/layout/activity_notifications_user.xml" value="0.2" />
+        <entry key="..\:/Users/athar/AndroidStudioProjects/Beyondr-REVAMP-JULY/app/src/main/res/layout/activity_package_team.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/athar/AndroidStudioProjects/Beyondr-REVAMP-JULY/app/src/main/res/layout/activity_splash_screen.xml" value="0.2115036231884058" />
+        <entry key="..\:/Users/athar/AndroidStudioProjects/Beyondr-REVAMP-JULY/app/src/main/res/layout/activity_user_database.xml" value="0.2" />
+        <entry key="..\:/Users/athar/AndroidStudioProjects/Beyondr-REVAMP-JULY/app/src/main/res/layout/activity_user_database_contact.xml" value="0.264" />
+        <entry key="..\:/Users/athar/AndroidStudioProjects/Beyondr-REVAMP-JULY/app/src/main/res/layout/activity_user_database_healthrecord.xml" value="0.264" />
+        <entry key="..\:/Users/athar/AndroidStudioProjects/Beyondr-REVAMP-JULY/app/src/main/res/layout/activity_user_profile.xml" value="0.2115036231884058" />
+        <entry key="..\:/Users/athar/AndroidStudioProjects/Beyondr-REVAMP-JULY/app/src/main/res/layout/activity_video_chat_view.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/athar/AndroidStudioProjects/Beyondr-REVAMP-JULY/app/src/main/res/layout/activity_wallet.xml" value="0.264" />
+        <entry key="..\:/Users/athar/AndroidStudioProjects/Beyondr-REVAMP-JULY/app/src/main/res/layout/app_bar_mainuser2.xml" value="0.2115036231884058" />
+        <entry key="..\:/Users/athar/AndroidStudioProjects/Beyondr-REVAMP-JULY/app/src/main/res/layout/appointments.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/athar/AndroidStudioProjects/Beyondr-REVAMP-JULY/app/src/main/res/layout/bookanappointment.xml" value="0.264" />
+        <entry key="..\:/Users/athar/AndroidStudioProjects/Beyondr-REVAMP-JULY/app/src/main/res/layout/broadcastrecyclerlive.xml" value="0.264" />
+        <entry key="..\:/Users/athar/AndroidStudioProjects/Beyondr-REVAMP-JULY/app/src/main/res/layout/broadcastupcoming.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/athar/AndroidStudioProjects/Beyondr-REVAMP-JULY/app/src/main/res/layout/calendardaterecycleritem.xml" value="0.264" />
+        <entry key="..\:/Users/athar/AndroidStudioProjects/Beyondr-REVAMP-JULY/app/src/main/res/layout/cardview_main_nav2.xml" value="0.2115036231884058" />
+        <entry key="..\:/Users/athar/AndroidStudioProjects/Beyondr-REVAMP-JULY/app/src/main/res/layout/certificates.xml" value="0.264" />
+        <entry key="..\:/Users/athar/AndroidStudioProjects/Beyondr-REVAMP-JULY/app/src/main/res/layout/chat_group_item.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/athar/AndroidStudioProjects/Beyondr-REVAMP-JULY/app/src/main/res/layout/chat_group_recycler_image.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/athar/AndroidStudioProjects/Beyondr-REVAMP-JULY/app/src/main/res/layout/chat_item.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/athar/AndroidStudioProjects/Beyondr-REVAMP-JULY/app/src/main/res/layout/commentspostrecycler.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/athar/AndroidStudioProjects/Beyondr-REVAMP-JULY/app/src/main/res/layout/day.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/athar/AndroidStudioProjects/Beyondr-REVAMP-JULY/app/src/main/res/layout/dimension_item.xml" value="0.2115036231884058" />
+        <entry key="..\:/Users/athar/AndroidStudioProjects/Beyondr-REVAMP-JULY/app/src/main/res/layout/doctorprofilerecycler.xml" value="0.264" />
+        <entry key="..\:/Users/athar/AndroidStudioProjects/Beyondr-REVAMP-JULY/app/src/main/res/layout/educationrecycler.xml" value="0.4" />
+        <entry key="..\:/Users/athar/AndroidStudioProjects/Beyondr-REVAMP-JULY/app/src/main/res/layout/experiencerecycler.xml" value="0.4" />
+        <entry key="..\:/Users/athar/AndroidStudioProjects/Beyondr-REVAMP-JULY/app/src/main/res/layout/explore_group_item.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/athar/AndroidStudioProjects/Beyondr-REVAMP-JULY/app/src/main/res/layout/fragment_activity.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/athar/AndroidStudioProjects/Beyondr-REVAMP-JULY/app/src/main/res/layout/fragment_activity_wellness.xml" value="0.2" />
+        <entry key="..\:/Users/athar/AndroidStudioProjects/Beyondr-REVAMP-JULY/app/src/main/res/layout/fragment_docproinformation.xml" value="0.264" />
+        <entry key="..\:/Users/athar/AndroidStudioProjects/Beyondr-REVAMP-JULY/app/src/main/res/layout/fragment_doctors.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/athar/AndroidStudioProjects/Beyondr-REVAMP-JULY/app/src/main/res/layout/fragment_inbox.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/athar/AndroidStudioProjects/Beyondr-REVAMP-JULY/app/src/main/res/layout/fragment_invite.xml" value="0.264" />
+        <entry key="..\:/Users/athar/AndroidStudioProjects/Beyondr-REVAMP-JULY/app/src/main/res/layout/fragment_mypatients.xml" value="0.264" />
+        <entry key="..\:/Users/athar/AndroidStudioProjects/Beyondr-REVAMP-JULY/app/src/main/res/layout/fragment_patients_history.xml" value="0.264" />
+        <entry key="..\:/Users/athar/AndroidStudioProjects/Beyondr-REVAMP-JULY/app/src/main/res/layout/fragment_request.xml" value="0.264" />
+        <entry key="..\:/Users/athar/AndroidStudioProjects/Beyondr-REVAMP-JULY/app/src/main/res/layout/fragment_request_active.xml" value="0.6" />
+        <entry key="..\:/Users/athar/AndroidStudioProjects/Beyondr-REVAMP-JULY/app/src/main/res/layout/fragment_request_packages.xml" value="0.264" />
+        <entry key="..\:/Users/athar/AndroidStudioProjects/Beyondr-REVAMP-JULY/app/src/main/res/layout/fragment_request_pending.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/athar/AndroidStudioProjects/Beyondr-REVAMP-JULY/app/src/main/res/layout/fragment_request_schedule.xml" value="0.264" />
+        <entry key="..\:/Users/athar/AndroidStudioProjects/Beyondr-REVAMP-JULY/app/src/main/res/layout/fragment_revenue.xml" value="0.264" />
+        <entry key="..\:/Users/athar/AndroidStudioProjects/Beyondr-REVAMP-JULY/app/src/main/res/layout/fragment_revenue_appointment.xml" value="0.264" />
+        <entry key="..\:/Users/athar/AndroidStudioProjects/Beyondr-REVAMP-JULY/app/src/main/res/layout/fragment_revenue_packages.xml" value="0.264" />
+        <entry key="..\:/Users/athar/AndroidStudioProjects/Beyondr-REVAMP-JULY/app/src/main/res/layout/fragment_summary.xml" value="0.264" />
+        <entry key="..\:/Users/athar/AndroidStudioProjects/Beyondr-REVAMP-JULY/app/src/main/res/layout/fragment_visit.xml" value="0.264" />
+        <entry key="..\:/Users/athar/AndroidStudioProjects/Beyondr-REVAMP-JULY/app/src/main/res/layout/fragment_wallet_history.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/athar/AndroidStudioProjects/Beyondr-REVAMP-JULY/app/src/main/res/layout/fragment_wallet_transactions.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/athar/AndroidStudioProjects/Beyondr-REVAMP-JULY/app/src/main/res/layout/healthrecordfragmentuser.xml" value="0.4" />
+        <entry key="..\:/Users/athar/AndroidStudioProjects/Beyondr-REVAMP-JULY/app/src/main/res/layout/homefragmentdoc.xml" value="0.264" />
+        <entry key="..\:/Users/athar/AndroidStudioProjects/Beyondr-REVAMP-JULY/app/src/main/res/layout/homefragmentuser.xml" value="0.264" />
+        <entry key="..\:/Users/athar/AndroidStudioProjects/Beyondr-REVAMP-JULY/app/src/main/res/layout/item_activity_wellness.xml" value="0.264" />
+        <entry key="..\:/Users/athar/AndroidStudioProjects/Beyondr-REVAMP-JULY/app/src/main/res/layout/item_addpost.xml" value="0.264" />
+        <entry key="..\:/Users/athar/AndroidStudioProjects/Beyondr-REVAMP-JULY/app/src/main/res/layout/item_apoointments.xml" value="0.536" />
+        <entry key="..\:/Users/athar/AndroidStudioProjects/Beyondr-REVAMP-JULY/app/src/main/res/layout/item_appointments.xml" value="0.264" />
+        <entry key="..\:/Users/athar/AndroidStudioProjects/Beyondr-REVAMP-JULY/app/src/main/res/layout/item_broadcastdoc.xml" value="0.264" />
+        <entry key="..\:/Users/athar/AndroidStudioProjects/Beyondr-REVAMP-JULY/app/src/main/res/layout/item_daydate.xml" value="0.264" />
+        <entry key="..\:/Users/athar/AndroidStudioProjects/Beyondr-REVAMP-JULY/app/src/main/res/layout/item_inbox.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/athar/AndroidStudioProjects/Beyondr-REVAMP-JULY/app/src/main/res/layout/item_invite.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/athar/AndroidStudioProjects/Beyondr-REVAMP-JULY/app/src/main/res/layout/item_messageslayout.xml" value="0.264" />
+        <entry key="..\:/Users/athar/AndroidStudioProjects/Beyondr-REVAMP-JULY/app/src/main/res/layout/item_mypatients.xml" value="0.264" />
+        <entry key="..\:/Users/athar/AndroidStudioProjects/Beyondr-REVAMP-JULY/app/src/main/res/layout/item_request_active.xml" value="0.264" />
+        <entry key="..\:/Users/athar/AndroidStudioProjects/Beyondr-REVAMP-JULY/app/src/main/res/layout/item_request_packages.xml" value="0.264" />
+        <entry key="..\:/Users/athar/AndroidStudioProjects/Beyondr-REVAMP-JULY/app/src/main/res/layout/item_request_pending.xml" value="0.264" />
+        <entry key="..\:/Users/athar/AndroidStudioProjects/Beyondr-REVAMP-JULY/app/src/main/res/layout/item_request_schedule.xml" value="0.264" />
+        <entry key="..\:/Users/athar/AndroidStudioProjects/Beyondr-REVAMP-JULY/app/src/main/res/layout/item_revenue_appointment.xml" value="0.264" />
+        <entry key="..\:/Users/athar/AndroidStudioProjects/Beyondr-REVAMP-JULY/app/src/main/res/layout/item_revenue_packages.xml" value="0.264" />
+        <entry key="..\:/Users/athar/AndroidStudioProjects/Beyondr-REVAMP-JULY/app/src/main/res/layout/item_wallet.xml" value="0.264" />
+        <entry key="..\:/Users/athar/AndroidStudioProjects/Beyondr-REVAMP-JULY/app/src/main/res/layout/itemallergies.xml" value="0.264" />
+        <entry key="..\:/Users/athar/AndroidStudioProjects/Beyondr-REVAMP-JULY/app/src/main/res/layout/itemhealthrecord.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/athar/AndroidStudioProjects/Beyondr-REVAMP-JULY/app/src/main/res/layout/layout_createnewpackage.xml" value="0.264" />
+        <entry key="..\:/Users/athar/AndroidStudioProjects/Beyondr-REVAMP-JULY/app/src/main/res/layout/layout_messages.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/athar/AndroidStudioProjects/Beyondr-REVAMP-JULY/app/src/main/res/layout/layout_newpost.xml" value="0.264" />
+        <entry key="..\:/Users/athar/AndroidStudioProjects/Beyondr-REVAMP-JULY/app/src/main/res/layout/layout_screen.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/athar/AndroidStudioProjects/Beyondr-REVAMP-JULY/app/src/main/res/layout/learningsfragmentwellnessuser.xml" value="0.2115036231884058" />
+        <entry key="..\:/Users/athar/AndroidStudioProjects/Beyondr-REVAMP-JULY/app/src/main/res/layout/nav_header_main.xml" value="0.4" />
+        <entry key="..\:/Users/athar/AndroidStudioProjects/Beyondr-REVAMP-JULY/app/src/main/res/layout/notificationrecycler.xml" value="0.264" />
+        <entry key="..\:/Users/athar/AndroidStudioProjects/Beyondr-REVAMP-JULY/app/src/main/res/layout/packagebroughtrecycleruser.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/athar/AndroidStudioProjects/Beyondr-REVAMP-JULY/app/src/main/res/layout/packagesfragment.xml" value="0.4" />
+        <entry key="..\:/Users/athar/AndroidStudioProjects/Beyondr-REVAMP-JULY/app/src/main/res/layout/personalhealthrecorduser.xml" value="0.264" />
+        <entry key="..\:/Users/athar/AndroidStudioProjects/Beyondr-REVAMP-JULY/app/src/main/res/layout/postlikeitem.xml" value="0.20425724637681159" />
+        <entry key="..\:/Users/athar/AndroidStudioProjects/Beyondr-REVAMP-JULY/app/src/main/res/layout/postrecycler.xml" value="0.264" />
+        <entry key="..\:/Users/athar/AndroidStudioProjects/Beyondr-REVAMP-JULY/app/src/main/res/layout/prescription.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/athar/AndroidStudioProjects/Beyondr-REVAMP-JULY/app/src/main/res/layout/teamfragment.xml" value="0.264" />
+        <entry key="..\:/Users/athar/AndroidStudioProjects/Beyondr-REVAMP-JULY/app/src/main/res/layout/wellnessfragment.xml" value="0.264" />
+        <entry key="..\:/Users/athar/AndroidStudioProjects/Beyondr-REVAMP-JULY/app/src/main/res/menu/bottom_nav.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/athar/AndroidStudioProjects/Beyondr-REVAMP-JULY/app/src/main/res/menu/bottom_navdoc.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/athar/AndroidStudioProjects/Beyondr-REVAMP-JULY/app/src/main/res/menu/bottom_navforscheduletab.xml" value="0.25416666666666665" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

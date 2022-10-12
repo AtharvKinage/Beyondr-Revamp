@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="40dp"
+        android:id="@+id/animationView"
+         android:visibility="gone"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <com.airbnb.lottie.LottieAnimationView
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            app:lottie_rawRes="@raw/empty"
+            android:layout_gravity="center"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="false"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/nunito_black"
+            android:layout_margin="20dp"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:text="Buy Packages Now and Get All Your Packages Shown here"/>
+<!--        <androidx.cardview.widget.CardView-->
+<!--            android:layout_width="150dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_gravity="center"-->
+<!--            android:layout_marginTop="2dp"-->
+<!--            android:layout_marginEnd="12dp"-->
+<!--            android:id="@+id/edit"-->
+<!--            android:layout_alignParentRight="true"-->
+<!--            android:layout_marginLeft="20dp"-->
+<!--            android:layout_marginBottom="2dp"-->
+<!--            app:cardCornerRadius="20dp"-->
+<!--            app:cardElevation="4dp">-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/viewPlan"-->
+<!--                android:layout_gravity="end"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:background="@drawable/top_left_right_rounded_grad_background"-->
+<!--                android:fontFamily="@font/catamaran_bold"-->
+<!--                android:gravity="center"-->
+<!--                android:paddingTop="8dp"-->
+<!--                android:paddingBottom="8dp"-->
+<!--                android:text="VIEW PACKAGES"-->
+<!--                android:textColor="@android:color/white"-->
+<!--                android:textSize="13sp" />-->
+<!--        </androidx.cardview.widget.CardView>-->
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:id="@+id/recycler"
+        tools:listitem="@layout/packagebroughtrecycleruser"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>

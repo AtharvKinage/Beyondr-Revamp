@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/alert_dialog_background"
+    android:layout_height="match_parent">
+    <SurfaceView
+        android:id="@+id/surface_camera"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1" />
+    <com.innovations.beyondr.Agora.ui.VideoGridContainer
+        android:id="@+id/live_video_grid_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+    </com.innovations.beyondr.Agora.ui.VideoGridContainer>
+    <RelativeLayout
+        android:id="@+id/live_room_top_layout"
+        android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_height="@dimen/live_top_layout_height"
+        android:layout_alignParentTop="true">
+
+
+
+
+        <LinearLayout
+            android:id="@+id/live_name_space_layout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/live_name_board_height"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="10dp"
+
+            android:orientation="horizontal"
+
+            >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/live_name_board_height"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:visibility="gone"
+                android:layout_weight="1"
+
+                android:minWidth="100dp"
+                android:maxWidth="200dp"
+                android:orientation="horizontal"
+
+                android:background="@drawable/live_name_board_bg"
+                >
+                <TextView
+                    android:id="@+id/live_room_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/live_name_text_height"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="@dimen/live_name_text_margin_left"
+                    android:layout_marginStart="@dimen/live_name_text_margin_left"
+                    android:textAlignment="gravity"
+                    android:gravity="bottom"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/text_size_medium"
+                    android:ellipsize="marquee"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:singleLine="true"/>
+                <TextView
+                    android:id="@+id/live_room_broadcaster_uid"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/live_name_text_height"
+                    android:layout_below="@id/live_room_name"
+                    android:layout_marginLeft="@dimen/live_name_text_margin_left"
+                    android:layout_marginStart="@dimen/live_name_text_margin_left"
+                    android:textAlignment="gravity"
+                    android:gravity="top"
+                    android:textColor="@color/gray_lightest"
+                    android:textSize="@dimen/text_size_small"/>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_marginLeft="10dp"
+                android:visibility="gone"
+                android:layout_weight="1"
+                android:text="LIVE"
+                android:layout_gravity="center"
+                android:layout_alignParentRight="true"
+                android:gravity="center"
+                android:layout_marginRight="20dp"
+                android:id="@+id/livecount"
+                android:textColor="#FBF8FF"
+                android:background="#BF443B"
+                android:scaleType="centerCrop"
+                />
+
+            <ImageView
+                android:layout_width="@dimen/live_leave_btn_size"
+                android:layout_height="@dimen/live_leave_btn_size"
+                android:layout_toLeftOf="@+id/btn_leave"
+                android:visibility="gone"
+                android:layout_alignParentBottom="true"
+                android:id="@+id/onpush"
+                android:layout_marginBottom="6dp"
+                android:layout_marginRight="@dimen/live_top_layout_margin"
+                android:layout_marginEnd="@dimen/live_top_layout_margin"
+                android:src="@drawable/btn_push_stream"
+                android:scaleType="centerCrop"
+                android:background="@drawable/rounded_bg_half_transparent"
+                android:onClick="onPushStreamClicked"/>
+        </LinearLayout>
+
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_below="@+id/live_room_top_layout"
+        android:layout_height="wrap_content">
+
+    </RelativeLayout>
+
+
+
+    <LinearLayout
+        android:id="@+id/bottom_container"
+        android:layout_width="match_parent"
+
+        android:layout_height="wrap_content"
+
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="@dimen/live_bottom_layout_margin"
+        android:layout_marginStart="@dimen/live_bottom_layout_margin"
+        android:layout_marginRight="@dimen/live_bottom_layout_margin"
+        android:layout_marginEnd="@dimen/live_bottom_layout_margin"
+        android:layout_marginBottom="@dimen/live_bottom_layout_margin">
+        <ImageView
+            android:id="@+id/live_btn_switch_camera"
+            android:layout_width="50dp"
+            android:layout_height="@dimen/live_bottom_btn_size"
+            android:layout_weight="1"
+            android:layout_centerVertical="true"
+            android:src="@drawable/btn_switch_camera"
+            android:scaleType="centerCrop"
+            android:background="@drawable/rounded_bg_full_transparent"
+            android:onClick="onSwitchCameraClicked"/>
+        <Space
+            android:layout_width="@dimen/live_bottom_btn_size"
+            android:layout_height="@dimen/live_bottom_btn_size"
+            android:layout_weight="1"
+            />
+        <ImageView
+            android:id="@+id/live_btn_beautification"
+            android:layout_width="50dp"
+            android:layout_height="@dimen/live_bottom_btn_size"
+            android:layout_weight="1"
+            android:layout_centerVertical="true"
+            android:src="@drawable/btn_beauty"
+            android:scaleType="centerCrop"
+            android:background="@drawable/rounded_bg_full_transparent"
+            android:onClick="onBeautyClicked"/>
+        <Space
+            android:layout_width="@dimen/live_bottom_btn_size"
+            android:layout_height="@dimen/live_bottom_btn_size"
+            android:layout_weight="1"
+            />
+        <ImageView
+            android:id="@+id/live_btn_more"
+            android:layout_width="50dp"
+            android:layout_height="@dimen/live_bottom_btn_size"
+            android:padding="5dp"
+            android:layout_weight="1"
+            android:visibility="gone"
+            android:layout_centerVertical="true"
+            android:src="@drawable/btn_person_add"
+            android:scaleType="centerCrop"
+            android:background="@drawable/rounded_bg_full_transparent"
+            android:onClick="onMoreClicked"/>
+        <Space
+            android:layout_width="@dimen/live_bottom_btn_size"
+            android:layout_height="@dimen/live_bottom_btn_size"
+            android:layout_weight="1"
+            />
+        <!--        <ImageView-->
+        <!--            android:id="@+id/live_btn_push_stream"-->
+        <!--            android:layout_width="@dimen/live_bottom_btn_size"-->
+        <!--            android:layout_height="@dimen/live_bottom_btn_size"-->
+        <!--            android:layout_alignParentRight="true"-->
+        <!--            android:layout_alignParentEnd="true"-->
+        <!--            android:layout_centerVertical="true"-->
+        <!--            android:src="@drawable/btn_push_stream"-->
+        <!--            android:scaleType="centerCrop"-->
+        <!--            android:background="@drawable/rounded_bg_full_transparent"-->
+        <!--            android:onClick="onPushStreamClicked"/>-->
+        <ImageView
+            android:id="@+id/live_btn_mute_audio"
+            android:layout_width="50dp"
+            android:layout_height="@dimen/live_bottom_btn_size"
+            android:layout_weight="1"
+            android:layout_centerVertical="true"
+            android:src="@drawable/btn_mute_audio"
+            android:scaleType="centerCrop"
+            android:background="@drawable/rounded_bg_full_transparent"
+            android:onClick="onMuteAudioClicked"/>
+        <Space
+            android:layout_width="@dimen/live_bottom_btn_size"
+            android:layout_height="@dimen/live_bottom_btn_size"
+            android:layout_weight="1"
+            />
+        <ImageView
+            android:id="@+id/live_btn_mute_video"
+            android:layout_width="50dp"
+            android:layout_height="@dimen/live_bottom_btn_size"
+            android:layout_marginRight="@dimen/live_bottom_btn_margin"
+            android:layout_marginEnd="@dimen/live_bottom_btn_margin"
+            android:layout_weight="1"
+            android:layout_centerVertical="true"
+            android:onClick="onLeaveClicked"
+            android:src="@drawable/btn_leave"
+            android:background="@drawable/rounded_bg_half_transparent"
+            android:scaleType="centerCrop"
+
+            />
+    </LinearLayout>
+
+</RelativeLayout>

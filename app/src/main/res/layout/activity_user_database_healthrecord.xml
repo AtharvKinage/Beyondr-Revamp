@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@drawable/blurimage"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:gravity="center"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/back"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:layout_marginLeft="20dp"
+                android:layout_gravity="center"
+                android:fontFamily="@font/nunito_bold"
+                android:textColor="@color/black"
+                android:text="Health Record 3/3"/>
+        </LinearLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="20dp"
+
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/backg"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="40dp"
+                    android:fontFamily="@font/axiforma"
+                    android:text="Smoke"
+                    android:textColor="#B7B7B7"
+                    android:textSize="13dp"
+
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_weight="1">
+
+                        <RadioGroup
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            app:singleSelection="true">
+
+                            <com.google.android.material.chip.Chip
+                                android:layout_width="180dp"
+                                android:layout_height="70dp"
+                                android:checkable="true"
+                                android:checked="true"
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:text="Yes"
+                                android:textAlignment="center"
+                                app:chipBackgroundColor="@color/customchipyes"
+                                app:checkedIconEnabled="false">
+
+                            </com.google.android.material.chip.Chip>
+
+                            <com.google.android.material.chip.Chip
+                                android:layout_width="180dp"
+                                android:layout_height="70dp"
+                                android:layout_marginLeft="5dp"
+                                android:text="No"
+                                android:textAlignment="center"
+                                android:checkable="true"
+                                android:clickable="true"
+                                android:focusable="true"
+                                app:chipBackgroundColor="@color/customchipno"
+                                app:checkedIconEnabled="false">
+
+                            </com.google.android.material.chip.Chip>
+                            "
+                        </RadioGroup>
+                    </FrameLayout>
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/axiforma"
+                    android:text="Alcohol"
+                    android:textColor="#B7B7B7"
+                    android:textSize="13dp"
+
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_weight="1">
+
+                        <RadioGroup
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            app:singleSelection="true">
+
+                            <com.google.android.material.chip.Chip
+                                android:layout_width="180dp"
+                                android:layout_height="70dp"
+                                android:text="Yes"
+                                android:textAlignment="center"
+                                android:checkable="true"
+                                android:clickable="true"
+                                android:focusable="true"
+                                app:chipBackgroundColor="@color/customchipyes"
+                                app:checkedIconEnabled="false"
+
+                                >
+
+                            </com.google.android.material.chip.Chip>
+
+                            <com.google.android.material.chip.Chip
+                                android:layout_width="180dp"
+                                android:layout_height="70dp"
+                                android:layout_marginLeft="5dp"
+                                android:text="No"
+                                android:textAlignment="center"
+                                android:checkable="true"
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:checked="true"
+                                app:chipBackgroundColor="@color/customchipno"
+                                app:checkedIconEnabled="false">
+
+                            </com.google.android.material.chip.Chip>
+                            "
+                        </RadioGroup>
+                    </FrameLayout>
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/axiforma"
+                    android:text="Allergies"
+                    android:textColor="#B7B7B7"
+                    android:textSize="13dp"
+
+                    />
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="20dp"
+                    android:background="@drawable/button_gray"
+                    android:backgroundTint="#F7F7F7">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:background="@null"
+                        android:fontFamily="@font/nunito_bold"
+                        android:gravity="center"
+                        android:minHeight="50dp"
+                        android:onClick="addallergy"
+                        android:text="ADD+"
+                        android:textColor="#6C6C6C"
+                        android:textColorHint="#6C6C6C"
+                        android:textSize="13dp">
+
+                    </TextView>
+
+                </FrameLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/allergyrecyc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    tools:listitem="@layout/itemallergies"
+                    android:orientation="horizontal"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/axiforma"
+                    android:onClick="addpersonalhealthrecord"
+                    android:text="Add Personal Health Record"
+                    android:textColor="#B7B7B7"
+                    android:textSize="13dp"
+
+                    />
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="20dp"
+                    android:background="@drawable/button_gray"
+                    android:backgroundTint="#F7F7F7">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:background="@null"
+                        android:fontFamily="@font/nunito_bold"
+                        android:gravity="center"
+                        android:minHeight="50dp"
+                        android:onClick="addpersonalhealthrecord"
+                        android:text="ADD+"
+                        android:textColor="#6C6C6C"
+                        android:textColorHint="#6C6C6C"
+                        android:textSize="13dp">
+
+                    </TextView>
+
+                </FrameLayout>
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/healthrecordrecycler"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    tools:listitem="@layout/itemhealthrecord"
+                    android:orientation="horizontal"/>
+
+                <android.widget.Button
+                    android:id="@+id/button"
+                    style="@style/buttonStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/button_height"
+                    android:layout_above="@+id/button2"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="15dp"
+                    android:fontFamily="@font/axiforma"
+                    android:onClick="submit"
+                    android:text="Submit"
+                    app:layout_constraintBottom_toTopOf="@+id/button2" />
+            </LinearLayout>
+
+            <ProgressBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/p"
+                android:visibility="gone"
+                android:layout_centerInParent="true"/>
+        </RelativeLayout>
+
+    </LinearLayout>
+</ScrollView>

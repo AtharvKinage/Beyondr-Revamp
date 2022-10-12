@@ -1,0 +1,2838 @@
+type User {
+  id: ID!
+  name: String!
+  userid: ID!
+  email: String!
+  message(filter: ModelMessageFilterInput, sortDirection: ModelSortDirection, limit: Int, nextToken: String): ModelMessageConnection
+  awsdate: String!
+  appointment(filter: ModelAppointmentFilterInput, sortDirection: ModelSortDirection, limit: Int, nextToken: String): ModelAppointmentConnection
+  userdatabase(filter: ModelUserDatabaseFilterInput, sortDirection: ModelSortDirection, limit: Int, nextToken: String): ModelUserDatabaseConnection
+  doctor(filter: ModelDoctorFilterInput, sortDirection: ModelSortDirection, limit: Int, nextToken: String): ModelDoctorConnection
+  post(filter: ModelPostFilterInput, sortDirection: ModelSortDirection, limit: Int, nextToken: String): ModelPostConnection
+  createdAt: AWSDateTime!
+  updatedAt: AWSDateTime!
+}
+
+enum BookMarkType {
+  BROADCAST
+  DISCUSSIONGROUP
+}
+
+type BookMark {
+  id: ID!
+  userid: ID!
+  bookmarktype: BookMarkType!
+  discussiongroupid: ID
+  livebroadcastingid: ID
+  createdAt: AWSDateTime!
+  updatedAt: AWSDateTime!
+}
+
+type PaymentRequest {
+  id: ID!
+  PaymentRequestType: PaymentRequestType!
+  doctorID: ID!
+  date: AWSDateTime!
+  appointmentid: ID!
+  request: PaymenttoDoctor!
+  paidtodoctordate: AWSDateTime
+  createdAt: AWSDateTime!
+  updatedAt: AWSDateTime!
+}
+
+type PackagesBuy {
+  id: ID!
+  doctorID: ID!
+  userID: ID!
+  numberofappointmentsused: String!
+  consultationfees: String!
+  conultationfesscurrency: String!
+  numofappointments: String!
+  validity: String!
+  date: AWSDateTime!
+  doctortype: DoctorType!
+  PaymentCompletionStatus: PaymentCompletionStatus!
+  PaymentMode: PaymentMode
+  createdAt: AWSDateTime!
+  updatedAt: AWSDateTime!
+}
+
+type Packages {
+  id: ID!
+  doctorID: ID!
+  consultationfees: String!
+  conultationfesscurrency: String!
+  numofappointments: String!
+  validity: String!
+  doctortype: DoctorType!
+  createdAt: AWSDateTime!
+  updatedAt: AWSDateTime!
+}
+
+type BroadCast {
+  id: ID!
+  doctorID: ID!
+  date: AWSDateTime!
+  name: String!
+  description: String!
+  doctortype: DoctorType!
+  BroadCastStatus: BroadCastStatus!
+  createdAt: AWSDateTime!
+  updatedAt: AWSDateTime!
+}
+
+type Communities {
+  id: ID!
+  communityname: String!
+  communityowner: ID!
+  description: String!
+  createdAt: AWSDateTime!
+  updatedAt: AWSDateTime!
+}
+
+type ContactUs {
+  id: ID!
+  userid: ID!
+  date: AWSDateTime!
+  title: String!
+  description: String!
+  createdAt: AWSDateTime!
+  updatedAt: AWSDateTime!
+}
+
+type Notifications {
+  id: ID!
+  meetingid: ID!
+  request: Request!
+  userid: ID!
+  date: AWSDateTime!
+  doctorid: ID!
+  createdAt: AWSDateTime!
+  updatedAt: AWSDateTime!
+}
+
+type PaymentfromWallet {
+  id: ID!
+  amount: String!
+  currency: String!
+  date: AWSDateTime!
+  paymentfrom: ID!
+  createdAt: AWSDateTime!
+  updatedAt: AWSDateTime!
+}
+
+type PaymentforWallet {
+  id: ID!
+  amount: String!
+  currency: String!
+  date: AWSDateTime!
+  paymentfrom: ID!
+  createdAt: AWSDateTime!
+  updatedAt: AWSDateTime!
+}
+
+type PaymentforAppointment {
+  id: ID!
+  amount: String!
+  paymentfrom: ID!
+  currency: String!
+  date: AWSDateTime!
+  paymentto: ID!
+  appointmentid: ID!
+  createdAt: AWSDateTime!
+  updatedAt: AWSDateTime!
+}
+
+type WellnessPost {
+  id: ID!
+  title: String!
+  image: Boolean!
+  date: AWSDateTime!
+  description: String!
+  createdAt: AWSDateTime!
+  updatedAt: AWSDateTime!
+}
+
+type Post {
+  id: ID!
+  UserID: ID!
+  postidreference: ID!
+  PostType: PostType!
+  title: String!
+  image: Boolean!
+  date: AWSDateTime!
+  description: String!
+  numberoflikes: String!
+  imagetype: VideoType
+  DoctorType: DoctorType
+  likedbyusers(filter: ModelLikesFilterInput, sortDirection: ModelSortDirection, limit: Int, nextToken: String): ModelLikesConnection
+  comments(filter: ModelCommentsFilterInput, sortDirection: ModelSortDirection, limit: Int, nextToken: String): ModelCommentsConnection
+  createdAt: AWSDateTime!
+  updatedAt: AWSDateTime!
+}
+
+type Likes {
+  id: ID!
+  PostID: ID!
+  date: AWSDateTime!
+  UserId: ID!
+  createdAt: AWSDateTime!
+  updatedAt: AWSDateTime!
+}
+
+type Comments {
+  id: ID!
+  PostID: ID!
+  UserId: ID!
+  date: AWSDateTime!
+  comment: String!
+  commentfrom: UserType!
+  createdAt: AWSDateTime!
+  updatedAt: AWSDateTime!
+}
+
+enum UserType {
+  USER
+  DOCTOR
+  COACH
+}
+
+type ReplyComments {
+  id: ID!
+  PostID: ID!
+  UserId: ID!
+  comment: String!
+  date: AWSDateTime!
+  commentfrom: UserType!
+  createdAt: AWSDateTime!
+  updatedAt: AWSDateTime!
+}
+
+type Report {
+  id: ID!
+  userID: ID!
+  doctorID: ID
+  meetingid: ID
+  reoporttype: ReportType!
+  date: AWSDateTime!
+  summnaryname: String
+  summarydosage: String
+  summnaryinstr: String
+  summnaryreason: String
+  rxname: String
+  rxdosage: String
+  rxinstr: String
+  rxreason: String
+  labsname: String
+  labsdosage: String
+  labsinstr: String
+  labsreason: String
+  visitnotes: String
+  createdAt: AWSDateTime!
+  updatedAt: AWSDateTime!
+}
+
+type CoachPrescTask {
+  id: ID!
+  userID: ID!
+  doctorID: ID!
+  meetingid: ID!
+  weekday: WeekDay!
+  task: String!
+  date: AWSDateTime!
+  createdAt: AWSDateTime!
+  updatedAt: AWSDateTime!
+}
+
+type ReportsShared {
+  id: ID!
+  userID: ID!
+  doctorID: ID!
+  meetingid: String!
+  date: AWSDateTime!
+  createdAt: AWSDateTime!
+  updatedAt: AWSDateTime!
+}
+
+type Appointment {
+  id: ID!
+  userID: ID!
+  doctorID: ID!
+  paymentMode: PaymentMode
+  packagebuyid: ID
+  consultationfees: String!
+  PaymentCompletionStatus: PaymentCompletionStatus!
+  conultationfesscurrency: String!
+  starttime: String!
+  slottime: String!
+  date: AWSDateTime!
+  meetingid: ID!
+  status: Status!
+  request: Request!
+  message: String
+  personalConsult: Boolean
+  videoconsult: Boolean
+  cancelledbyuser: Boolean
+  cancellationdate: AWSDateTime
+  cancelledbydoctor: Boolean
+  doctortype: DoctorType!
+  createdAt: AWSDateTime!
+  updatedAt: AWSDateTime!
+}
+
+type CommunityMessage {
+  id: ID!
+  communityid: ID!
+  messagefrom: ID!
+  date: AWSDateTime!
+  content: String!
+  messagetype: MessageType!
+  createdAt: AWSDateTime!
+  updatedAt: AWSDateTime!
+}
+
+type Message {
+  id: ID!
+  DoctorsID: ID!
+  UserID: ID!
+  messagetype: MessageType!
+  content: String
+  currentmessage: ID!
+  readbydoctor: Boolean!
+  imageboolean: Boolean!
+  readbyuser: Boolean!
+  date: AWSDateTime
+  createdAt: AWSDateTime!
+  updatedAt: AWSDateTime!
+}
+
+type UserDatabase {
+  id: ID!
+  UserID: ID!
+  name: String
+  lastname: String
+  sex: String
+  birthday: String
+  hieght: String
+  weight: String
+  emailaddress: String
+  phonenumber: String
+  emergencycontact: String
+  streetaddress: String
+  city: String
+  zipcode: String
+  smoke: String
+  alchol: String
+  date: AWSDateTime
+  createdAt: AWSDateTime!
+  updatedAt: AWSDateTime!
+}
+
+type Allergies {
+  id: ID!
+  userid: ID!
+  allergyname: String!
+  description: String!
+  createdAt: AWSDateTime!
+  updatedAt: AWSDateTime!
+}
+
+type Experience {
+  id: ID!
+  doctorID: ID!
+  Title: String!
+  CompanyName: String!
+  location: String!
+  doctortype: DoctorType!
+  Description: String!
+  startdate: String!
+  enddate: String!
+  createdAt: AWSDateTime!
+  updatedAt: AWSDateTime!
+}
+
+type Doctor {
+  id: ID!
+  UserID: ID!
+  doctortype: DoctorType!
+  name: String
+  about: String
+  npi: String
+  languagesspoken: String
+  country: String
+  localaddress: String
+  paycut: String!
+  state: String
+  zipcode: String
+  specialization: String
+  yearsofexxperience: String
+  gender: String
+  status: DoctorProfileReview!
+  insurance: String
+  offlineconsultation: Boolean
+  appointmentscompleted: String!
+  viewsonprofile: String!
+  education(filter: ModelEducationFilterInput, sortDirection: ModelSortDirection, limit: Int, nextToken: String): ModelEducationConnection
+  experience(filter: ModelExperienceFilterInput, sortDirection: ModelSortDirection, limit: Int, nextToken: String): ModelExperienceConnection
+  certificates(filter: ModelCertificatesFilterInput, sortDirection: ModelSortDirection, limit: Int, nextToken: String): ModelCertificatesConnection
+  appointment(filter: ModelAppointmentFilterInput, sortDirection: ModelSortDirection, limit: Int, nextToken: String): ModelAppointmentConnection
+  message(filter: ModelMessageFilterInput, sortDirection: ModelSortDirection, limit: Int, nextToken: String): ModelMessageConnection
+  createdAt: AWSDateTime!
+  updatedAt: AWSDateTime!
+}
+
+type Certificates {
+  id: ID!
+  doctorID: ID!
+  imageurl: String!
+  description: String!
+  doctortype: DoctorType!
+  createdAt: AWSDateTime!
+  updatedAt: AWSDateTime!
+}
+
+type Slots {
+  id: ID!
+  doctorID: ID!
+  consulttime: String!
+  starttime: String!
+  endtime: String!
+  consultationfees: String!
+  conultationfesscurrency: String!
+  videoconsultations: Boolean!
+  inpersonconsultation: Boolean!
+  videoandinpersonconsultation: Boolean!
+  consultationtimeedit: String!
+  monday: Boolean!
+  tuesday: Boolean!
+  wednesday: Boolean!
+  thursday: Boolean!
+  friday: Boolean!
+  saturday: Boolean!
+  sunday: Boolean!
+  activeinactive: SlotActiveInactive
+  doctortype: DoctorType!
+  createdAt: AWSDateTime!
+  updatedAt: AWSDateTime!
+}
+
+type Invite {
+  id: ID!
+  doctorID: ID!
+  UserID: ID!
+  message: String!
+  invite: Request!
+  date: AWSDateTime!
+  createdAt: AWSDateTime!
+  updatedAt: AWSDateTime!
+}
+
+type Education {
+  id: ID!
+  doctorID: ID!
+  nameofuniversity: String!
+  fieldofstudy: String!
+  doctortype: DoctorType!
+  degree: String!
+  startdate: String!
+  enddate: String!
+  gradepoint: String
+  createdAt: AWSDateTime!
+  updatedAt: AWSDateTime!
+}
+
+enum Status {
+  PENDING
+  DONE
+  CANCELLED
+}
+
+enum Privacy {
+  PRIVATE
+  UNLOCKED
+}
+
+enum ReportType {
+  HARDCOPY
+  DIGITAL
+  PERSONAL
+}
+
+enum Request {
+  REQUESTED
+  CONFIRMED
+  CANCELLED
+  REJECTED
+}
+
+enum MessageType {
+  IMAGE
+  TEXT
+}
+
+enum DoctorProfileReview {
+  UNDERREVIEW
+  PUBLISHED
+  SUBMITTED
+  REJECTED
+}
+
+enum PaymenttoDoctor {
+  GIVEN
+  UNDERREVIEW
+}
+
+enum SlotActiveInactive {
+  ACTIVE
+  INACTIVE
+}
+
+enum DoctorType {
+  DOCTOR
+  COACH
+}
+
+enum PaymentMode {
+  STRIPE
+  PACKAGE
+  BALANCE
+}
+
+enum PackageType {
+  COMMUNICATION
+  APPOINTMENTS
+}
+
+enum PaymentCompletionStatus {
+  PAYMENTCOMPLETED
+  PAYMENTNOTCOMPLETED
+}
+
+enum WeekDay {
+  Monday
+  Tuesday
+  Wednesday
+  Thursday
+  Friday
+  Saturday
+  Sunday
+}
+
+enum PostType {
+  NormalPost
+  LearningsWellnesPost
+}
+
+enum PaymentRequestType {
+  PACKAGES
+  APPOINTMENT
+}
+
+enum VideoType {
+  VIDEO
+  IMAGE
+}
+
+enum BroadCastStatus {
+  LIVE
+  NOTLIVE
+}
+
+enum ModelSortDirection {
+  ASC
+  DESC
+}
+
+type ModelUserConnection {
+  items: [User]
+  nextToken: String
+}
+
+input ModelStringInput {
+  ne: String
+  eq: String
+  le: String
+  lt: String
+  ge: String
+  gt: String
+  contains: String
+  notContains: String
+  between: [String]
+  beginsWith: String
+  attributeExists: Boolean
+  attributeType: ModelAttributeTypes
+  size: ModelSizeInput
+}
+
+input ModelIDInput {
+  ne: ID
+  eq: ID
+  le: ID
+  lt: ID
+  ge: ID
+  gt: ID
+  contains: ID
+  notContains: ID
+  between: [ID]
+  beginsWith: ID
+  attributeExists: Boolean
+  attributeType: ModelAttributeTypes
+  size: ModelSizeInput
+}
+
+input ModelIntInput {
+  ne: Int
+  eq: Int
+  le: Int
+  lt: Int
+  ge: Int
+  gt: Int
+  between: [Int]
+  attributeExists: Boolean
+  attributeType: ModelAttributeTypes
+}
+
+input ModelFloatInput {
+  ne: Float
+  eq: Float
+  le: Float
+  lt: Float
+  ge: Float
+  gt: Float
+  between: [Float]
+  attributeExists: Boolean
+  attributeType: ModelAttributeTypes
+}
+
+input ModelBooleanInput {
+  ne: Boolean
+  eq: Boolean
+  attributeExists: Boolean
+  attributeType: ModelAttributeTypes
+}
+
+input ModelSizeInput {
+  ne: Int
+  eq: Int
+  le: Int
+  lt: Int
+  ge: Int
+  gt: Int
+  between: [Int]
+}
+
+input ModelUserFilterInput {
+  id: ModelIDInput
+  name: ModelStringInput
+  userid: ModelIDInput
+  email: ModelStringInput
+  awsdate: ModelStringInput
+  and: [ModelUserFilterInput]
+  or: [ModelUserFilterInput]
+  not: ModelUserFilterInput
+}
+
+enum ModelAttributeTypes {
+  binary
+  binarySet
+  bool
+  list
+  map
+  number
+  numberSet
+  string
+  stringSet
+  _null
+}
+
+type Query {
+  getUser(id: ID!): User
+  listUsers(filter: ModelUserFilterInput, limit: Int, nextToken: String): ModelUserConnection
+  getBookMark(id: ID!): BookMark
+  listBookMarks(filter: ModelBookMarkFilterInput, limit: Int, nextToken: String): ModelBookMarkConnection
+  getPaymentRequest(id: ID!): PaymentRequest
+  listPaymentRequests(filter: ModelPaymentRequestFilterInput, limit: Int, nextToken: String): ModelPaymentRequestConnection
+  getPackagesBuy(id: ID!): PackagesBuy
+  listPackagesBuys(filter: ModelPackagesBuyFilterInput, limit: Int, nextToken: String): ModelPackagesBuyConnection
+  getPackages(id: ID!): Packages
+  listPackagess(filter: ModelPackagesFilterInput, limit: Int, nextToken: String): ModelPackagesConnection
+  getBroadCast(id: ID!): BroadCast
+  listBroadCasts(filter: ModelBroadCastFilterInput, limit: Int, nextToken: String): ModelBroadCastConnection
+  getCommunities(id: ID!): Communities
+  listCommunitiess(filter: ModelCommunitiesFilterInput, limit: Int, nextToken: String): ModelCommunitiesConnection
+  getContactUs(id: ID!): ContactUs
+  listContactUss(filter: ModelContactUsFilterInput, limit: Int, nextToken: String): ModelContactUsConnection
+  getNotifications(id: ID!): Notifications
+  listNotificationss(filter: ModelNotificationsFilterInput, limit: Int, nextToken: String): ModelNotificationsConnection
+  getPaymentfromWallet(id: ID!): PaymentfromWallet
+  listPaymentfromWallets(filter: ModelPaymentfromWalletFilterInput, limit: Int, nextToken: String): ModelPaymentfromWalletConnection
+  getPaymentforWallet(id: ID!): PaymentforWallet
+  listPaymentforWallets(filter: ModelPaymentforWalletFilterInput, limit: Int, nextToken: String): ModelPaymentforWalletConnection
+  getPaymentforAppointment(id: ID!): PaymentforAppointment
+  listPaymentforAppointments(filter: ModelPaymentforAppointmentFilterInput, limit: Int, nextToken: String): ModelPaymentforAppointmentConnection
+  getWellnessPost(id: ID!): WellnessPost
+  listWellnessPosts(filter: ModelWellnessPostFilterInput, limit: Int, nextToken: String): ModelWellnessPostConnection
+  getPost(id: ID!): Post
+  listPosts(filter: ModelPostFilterInput, limit: Int, nextToken: String): ModelPostConnection
+  getLikes(id: ID!): Likes
+  listLikess(filter: ModelLikesFilterInput, limit: Int, nextToken: String): ModelLikesConnection
+  getComments(id: ID!): Comments
+  listCommentss(filter: ModelCommentsFilterInput, limit: Int, nextToken: String): ModelCommentsConnection
+  getReplyComments(id: ID!): ReplyComments
+  listReplyCommentss(filter: ModelReplyCommentsFilterInput, limit: Int, nextToken: String): ModelReplyCommentsConnection
+  getReport(id: ID!): Report
+  listReports(filter: ModelReportFilterInput, limit: Int, nextToken: String): ModelReportConnection
+  getCoachPrescTask(id: ID!): CoachPrescTask
+  listCoachPrescTasks(filter: ModelCoachPrescTaskFilterInput, limit: Int, nextToken: String): ModelCoachPrescTaskConnection
+  getReportsShared(id: ID!): ReportsShared
+  listReportsShareds(filter: ModelReportsSharedFilterInput, limit: Int, nextToken: String): ModelReportsSharedConnection
+  getAppointment(id: ID!): Appointment
+  listAppointments(filter: ModelAppointmentFilterInput, limit: Int, nextToken: String): ModelAppointmentConnection
+  getCommunityMessage(id: ID!): CommunityMessage
+  listCommunityMessages(filter: ModelCommunityMessageFilterInput, limit: Int, nextToken: String): ModelCommunityMessageConnection
+  getMessage(id: ID!): Message
+  listMessages(filter: ModelMessageFilterInput, limit: Int, nextToken: String): ModelMessageConnection
+  getUserDatabase(id: ID!): UserDatabase
+  listUserDatabases(filter: ModelUserDatabaseFilterInput, limit: Int, nextToken: String): ModelUserDatabaseConnection
+  getAllergies(id: ID!): Allergies
+  listAllergiess(filter: ModelAllergiesFilterInput, limit: Int, nextToken: String): ModelAllergiesConnection
+  getExperience(id: ID!): Experience
+  listExperiences(filter: ModelExperienceFilterInput, limit: Int, nextToken: String): ModelExperienceConnection
+  getDoctor(id: ID!): Doctor
+  listDoctors(filter: ModelDoctorFilterInput, limit: Int, nextToken: String): ModelDoctorConnection
+  getCertificates(id: ID!): Certificates
+  listCertificatess(filter: ModelCertificatesFilterInput, limit: Int, nextToken: String): ModelCertificatesConnection
+  getSlots(id: ID!): Slots
+  listSlotss(filter: ModelSlotsFilterInput, limit: Int, nextToken: String): ModelSlotsConnection
+  getInvite(id: ID!): Invite
+  listInvites(filter: ModelInviteFilterInput, limit: Int, nextToken: String): ModelInviteConnection
+  getEducation(id: ID!): Education
+  listEducations(filter: ModelEducationFilterInput, limit: Int, nextToken: String): ModelEducationConnection
+}
+
+input CreateUserInput {
+  id: ID
+  name: String!
+  userid: ID!
+  email: String!
+  awsdate: String!
+}
+
+input UpdateUserInput {
+  id: ID!
+  name: String
+  userid: ID
+  email: String
+  awsdate: String
+}
+
+input DeleteUserInput {
+  id: ID!
+}
+
+type Mutation {
+  createUser(input: CreateUserInput!, condition: ModelUserConditionInput): User
+  updateUser(input: UpdateUserInput!, condition: ModelUserConditionInput): User
+  deleteUser(input: DeleteUserInput!, condition: ModelUserConditionInput): User
+  createBookMark(input: CreateBookMarkInput!, condition: ModelBookMarkConditionInput): BookMark
+  updateBookMark(input: UpdateBookMarkInput!, condition: ModelBookMarkConditionInput): BookMark
+  deleteBookMark(input: DeleteBookMarkInput!, condition: ModelBookMarkConditionInput): BookMark
+  createPaymentRequest(input: CreatePaymentRequestInput!, condition: ModelPaymentRequestConditionInput): PaymentRequest
+  updatePaymentRequest(input: UpdatePaymentRequestInput!, condition: ModelPaymentRequestConditionInput): PaymentRequest
+  deletePaymentRequest(input: DeletePaymentRequestInput!, condition: ModelPaymentRequestConditionInput): PaymentRequest
+  createPackagesBuy(input: CreatePackagesBuyInput!, condition: ModelPackagesBuyConditionInput): PackagesBuy
+  updatePackagesBuy(input: UpdatePackagesBuyInput!, condition: ModelPackagesBuyConditionInput): PackagesBuy
+  deletePackagesBuy(input: DeletePackagesBuyInput!, condition: ModelPackagesBuyConditionInput): PackagesBuy
+  createPackages(input: CreatePackagesInput!, condition: ModelPackagesConditionInput): Packages
+  updatePackages(input: UpdatePackagesInput!, condition: ModelPackagesConditionInput): Packages
+  deletePackages(input: DeletePackagesInput!, condition: ModelPackagesConditionInput): Packages
+  createBroadCast(input: CreateBroadCastInput!, condition: ModelBroadCastConditionInput): BroadCast
+  updateBroadCast(input: UpdateBroadCastInput!, condition: ModelBroadCastConditionInput): BroadCast
+  deleteBroadCast(input: DeleteBroadCastInput!, condition: ModelBroadCastConditionInput): BroadCast
+  createCommunities(input: CreateCommunitiesInput!, condition: ModelCommunitiesConditionInput): Communities
+  updateCommunities(input: UpdateCommunitiesInput!, condition: ModelCommunitiesConditionInput): Communities
+  deleteCommunities(input: DeleteCommunitiesInput!, condition: ModelCommunitiesConditionInput): Communities
+  createContactUs(input: CreateContactUsInput!, condition: ModelContactUsConditionInput): ContactUs
+  updateContactUs(input: UpdateContactUsInput!, condition: ModelContactUsConditionInput): ContactUs
+  deleteContactUs(input: DeleteContactUsInput!, condition: ModelContactUsConditionInput): ContactUs
+  createNotifications(input: CreateNotificationsInput!, condition: ModelNotificationsConditionInput): Notifications
+  updateNotifications(input: UpdateNotificationsInput!, condition: ModelNotificationsConditionInput): Notifications
+  deleteNotifications(input: DeleteNotificationsInput!, condition: ModelNotificationsConditionInput): Notifications
+  createPaymentfromWallet(input: CreatePaymentfromWalletInput!, condition: ModelPaymentfromWalletConditionInput): PaymentfromWallet
+  updatePaymentfromWallet(input: UpdatePaymentfromWalletInput!, condition: ModelPaymentfromWalletConditionInput): PaymentfromWallet
+  deletePaymentfromWallet(input: DeletePaymentfromWalletInput!, condition: ModelPaymentfromWalletConditionInput): PaymentfromWallet
+  createPaymentforWallet(input: CreatePaymentforWalletInput!, condition: ModelPaymentforWalletConditionInput): PaymentforWallet
+  updatePaymentforWallet(input: UpdatePaymentforWalletInput!, condition: ModelPaymentforWalletConditionInput): PaymentforWallet
+  deletePaymentforWallet(input: DeletePaymentforWalletInput!, condition: ModelPaymentforWalletConditionInput): PaymentforWallet
+  createPaymentforAppointment(input: CreatePaymentforAppointmentInput!, condition: ModelPaymentforAppointmentConditionInput): PaymentforAppointment
+  updatePaymentforAppointment(input: UpdatePaymentforAppointmentInput!, condition: ModelPaymentforAppointmentConditionInput): PaymentforAppointment
+  deletePaymentforAppointment(input: DeletePaymentforAppointmentInput!, condition: ModelPaymentforAppointmentConditionInput): PaymentforAppointment
+  createWellnessPost(input: CreateWellnessPostInput!, condition: ModelWellnessPostConditionInput): WellnessPost
+  updateWellnessPost(input: UpdateWellnessPostInput!, condition: ModelWellnessPostConditionInput): WellnessPost
+  deleteWellnessPost(input: DeleteWellnessPostInput!, condition: ModelWellnessPostConditionInput): WellnessPost
+  createPost(input: CreatePostInput!, condition: ModelPostConditionInput): Post
+  updatePost(input: UpdatePostInput!, condition: ModelPostConditionInput): Post
+  deletePost(input: DeletePostInput!, condition: ModelPostConditionInput): Post
+  createLikes(input: CreateLikesInput!, condition: ModelLikesConditionInput): Likes
+  updateLikes(input: UpdateLikesInput!, condition: ModelLikesConditionInput): Likes
+  deleteLikes(input: DeleteLikesInput!, condition: ModelLikesConditionInput): Likes
+  createComments(input: CreateCommentsInput!, condition: ModelCommentsConditionInput): Comments
+  updateComments(input: UpdateCommentsInput!, condition: ModelCommentsConditionInput): Comments
+  deleteComments(input: DeleteCommentsInput!, condition: ModelCommentsConditionInput): Comments
+  createReplyComments(input: CreateReplyCommentsInput!, condition: ModelReplyCommentsConditionInput): ReplyComments
+  updateReplyComments(input: UpdateReplyCommentsInput!, condition: ModelReplyCommentsConditionInput): ReplyComments
+  deleteReplyComments(input: DeleteReplyCommentsInput!, condition: ModelReplyCommentsConditionInput): ReplyComments
+  createReport(input: CreateReportInput!, condition: ModelReportConditionInput): Report
+  updateReport(input: UpdateReportInput!, condition: ModelReportConditionInput): Report
+  deleteReport(input: DeleteReportInput!, condition: ModelReportConditionInput): Report
+  createCoachPrescTask(input: CreateCoachPrescTaskInput!, condition: ModelCoachPrescTaskConditionInput): CoachPrescTask
+  updateCoachPrescTask(input: UpdateCoachPrescTaskInput!, condition: ModelCoachPrescTaskConditionInput): CoachPrescTask
+  deleteCoachPrescTask(input: DeleteCoachPrescTaskInput!, condition: ModelCoachPrescTaskConditionInput): CoachPrescTask
+  createReportsShared(input: CreateReportsSharedInput!, condition: ModelReportsSharedConditionInput): ReportsShared
+  updateReportsShared(input: UpdateReportsSharedInput!, condition: ModelReportsSharedConditionInput): ReportsShared
+  deleteReportsShared(input: DeleteReportsSharedInput!, condition: ModelReportsSharedConditionInput): ReportsShared
+  createAppointment(input: CreateAppointmentInput!, condition: ModelAppointmentConditionInput): Appointment
+  updateAppointment(input: UpdateAppointmentInput!, condition: ModelAppointmentConditionInput): Appointment
+  deleteAppointment(input: DeleteAppointmentInput!, condition: ModelAppointmentConditionInput): Appointment
+  createCommunityMessage(input: CreateCommunityMessageInput!, condition: ModelCommunityMessageConditionInput): CommunityMessage
+  updateCommunityMessage(input: UpdateCommunityMessageInput!, condition: ModelCommunityMessageConditionInput): CommunityMessage
+  deleteCommunityMessage(input: DeleteCommunityMessageInput!, condition: ModelCommunityMessageConditionInput): CommunityMessage
+  createMessage(input: CreateMessageInput!, condition: ModelMessageConditionInput): Message
+  updateMessage(input: UpdateMessageInput!, condition: ModelMessageConditionInput): Message
+  deleteMessage(input: DeleteMessageInput!, condition: ModelMessageConditionInput): Message
+  createUserDatabase(input: CreateUserDatabaseInput!, condition: ModelUserDatabaseConditionInput): UserDatabase
+  updateUserDatabase(input: UpdateUserDatabaseInput!, condition: ModelUserDatabaseConditionInput): UserDatabase
+  deleteUserDatabase(input: DeleteUserDatabaseInput!, condition: ModelUserDatabaseConditionInput): UserDatabase
+  createAllergies(input: CreateAllergiesInput!, condition: ModelAllergiesConditionInput): Allergies
+  updateAllergies(input: UpdateAllergiesInput!, condition: ModelAllergiesConditionInput): Allergies
+  deleteAllergies(input: DeleteAllergiesInput!, condition: ModelAllergiesConditionInput): Allergies
+  createExperience(input: CreateExperienceInput!, condition: ModelExperienceConditionInput): Experience
+  updateExperience(input: UpdateExperienceInput!, condition: ModelExperienceConditionInput): Experience
+  deleteExperience(input: DeleteExperienceInput!, condition: ModelExperienceConditionInput): Experience
+  createDoctor(input: CreateDoctorInput!, condition: ModelDoctorConditionInput): Doctor
+  updateDoctor(input: UpdateDoctorInput!, condition: ModelDoctorConditionInput): Doctor
+  deleteDoctor(input: DeleteDoctorInput!, condition: ModelDoctorConditionInput): Doctor
+  createCertificates(input: CreateCertificatesInput!, condition: ModelCertificatesConditionInput): Certificates
+  updateCertificates(input: UpdateCertificatesInput!, condition: ModelCertificatesConditionInput): Certificates
+  deleteCertificates(input: DeleteCertificatesInput!, condition: ModelCertificatesConditionInput): Certificates
+  createSlots(input: CreateSlotsInput!, condition: ModelSlotsConditionInput): Slots
+  updateSlots(input: UpdateSlotsInput!, condition: ModelSlotsConditionInput): Slots
+  deleteSlots(input: DeleteSlotsInput!, condition: ModelSlotsConditionInput): Slots
+  createInvite(input: CreateInviteInput!, condition: ModelInviteConditionInput): Invite
+  updateInvite(input: UpdateInviteInput!, condition: ModelInviteConditionInput): Invite
+  deleteInvite(input: DeleteInviteInput!, condition: ModelInviteConditionInput): Invite
+  createEducation(input: CreateEducationInput!, condition: ModelEducationConditionInput): Education
+  updateEducation(input: UpdateEducationInput!, condition: ModelEducationConditionInput): Education
+  deleteEducation(input: DeleteEducationInput!, condition: ModelEducationConditionInput): Education
+}
+
+input ModelUserConditionInput {
+  name: ModelStringInput
+  userid: ModelIDInput
+  email: ModelStringInput
+  awsdate: ModelStringInput
+  and: [ModelUserConditionInput]
+  or: [ModelUserConditionInput]
+  not: ModelUserConditionInput
+}
+
+type Subscription {
+  onCreateUser: User @aws_subscribe(mutations: ["createUser"])
+  onUpdateUser: User @aws_subscribe(mutations: ["updateUser"])
+  onDeleteUser: User @aws_subscribe(mutations: ["deleteUser"])
+  onCreateBookMark: BookMark @aws_subscribe(mutations: ["createBookMark"])
+  onUpdateBookMark: BookMark @aws_subscribe(mutations: ["updateBookMark"])
+  onDeleteBookMark: BookMark @aws_subscribe(mutations: ["deleteBookMark"])
+  onCreatePaymentRequest: PaymentRequest @aws_subscribe(mutations: ["createPaymentRequest"])
+  onUpdatePaymentRequest: PaymentRequest @aws_subscribe(mutations: ["updatePaymentRequest"])
+  onDeletePaymentRequest: PaymentRequest @aws_subscribe(mutations: ["deletePaymentRequest"])
+  onCreatePackagesBuy: PackagesBuy @aws_subscribe(mutations: ["createPackagesBuy"])
+  onUpdatePackagesBuy: PackagesBuy @aws_subscribe(mutations: ["updatePackagesBuy"])
+  onDeletePackagesBuy: PackagesBuy @aws_subscribe(mutations: ["deletePackagesBuy"])
+  onCreatePackages: Packages @aws_subscribe(mutations: ["createPackages"])
+  onUpdatePackages: Packages @aws_subscribe(mutations: ["updatePackages"])
+  onDeletePackages: Packages @aws_subscribe(mutations: ["deletePackages"])
+  onCreateBroadCast: BroadCast @aws_subscribe(mutations: ["createBroadCast"])
+  onUpdateBroadCast: BroadCast @aws_subscribe(mutations: ["updateBroadCast"])
+  onDeleteBroadCast: BroadCast @aws_subscribe(mutations: ["deleteBroadCast"])
+  onCreateCommunities: Communities @aws_subscribe(mutations: ["createCommunities"])
+  onUpdateCommunities: Communities @aws_subscribe(mutations: ["updateCommunities"])
+  onDeleteCommunities: Communities @aws_subscribe(mutations: ["deleteCommunities"])
+  onCreateContactUs: ContactUs @aws_subscribe(mutations: ["createContactUs"])
+  onUpdateContactUs: ContactUs @aws_subscribe(mutations: ["updateContactUs"])
+  onDeleteContactUs: ContactUs @aws_subscribe(mutations: ["deleteContactUs"])
+  onCreateNotifications: Notifications @aws_subscribe(mutations: ["createNotifications"])
+  onUpdateNotifications: Notifications @aws_subscribe(mutations: ["updateNotifications"])
+  onDeleteNotifications: Notifications @aws_subscribe(mutations: ["deleteNotifications"])
+  onCreatePaymentfromWallet: PaymentfromWallet @aws_subscribe(mutations: ["createPaymentfromWallet"])
+  onUpdatePaymentfromWallet: PaymentfromWallet @aws_subscribe(mutations: ["updatePaymentfromWallet"])
+  onDeletePaymentfromWallet: PaymentfromWallet @aws_subscribe(mutations: ["deletePaymentfromWallet"])
+  onCreatePaymentforWallet: PaymentforWallet @aws_subscribe(mutations: ["createPaymentforWallet"])
+  onUpdatePaymentforWallet: PaymentforWallet @aws_subscribe(mutations: ["updatePaymentforWallet"])
+  onDeletePaymentforWallet: PaymentforWallet @aws_subscribe(mutations: ["deletePaymentforWallet"])
+  onCreatePaymentforAppointment: PaymentforAppointment @aws_subscribe(mutations: ["createPaymentforAppointment"])
+  onUpdatePaymentforAppointment: PaymentforAppointment @aws_subscribe(mutations: ["updatePaymentforAppointment"])
+  onDeletePaymentforAppointment: PaymentforAppointment @aws_subscribe(mutations: ["deletePaymentforAppointment"])
+  onCreateWellnessPost: WellnessPost @aws_subscribe(mutations: ["createWellnessPost"])
+  onUpdateWellnessPost: WellnessPost @aws_subscribe(mutations: ["updateWellnessPost"])
+  onDeleteWellnessPost: WellnessPost @aws_subscribe(mutations: ["deleteWellnessPost"])
+  onCreatePost: Post @aws_subscribe(mutations: ["createPost"])
+  onUpdatePost: Post @aws_subscribe(mutations: ["updatePost"])
+  onDeletePost: Post @aws_subscribe(mutations: ["deletePost"])
+  onCreateLikes: Likes @aws_subscribe(mutations: ["createLikes"])
+  onUpdateLikes: Likes @aws_subscribe(mutations: ["updateLikes"])
+  onDeleteLikes: Likes @aws_subscribe(mutations: ["deleteLikes"])
+  onCreateComments: Comments @aws_subscribe(mutations: ["createComments"])
+  onUpdateComments: Comments @aws_subscribe(mutations: ["updateComments"])
+  onDeleteComments: Comments @aws_subscribe(mutations: ["deleteComments"])
+  onCreateReplyComments: ReplyComments @aws_subscribe(mutations: ["createReplyComments"])
+  onUpdateReplyComments: ReplyComments @aws_subscribe(mutations: ["updateReplyComments"])
+  onDeleteReplyComments: ReplyComments @aws_subscribe(mutations: ["deleteReplyComments"])
+  onCreateReport: Report @aws_subscribe(mutations: ["createReport"])
+  onUpdateReport: Report @aws_subscribe(mutations: ["updateReport"])
+  onDeleteReport: Report @aws_subscribe(mutations: ["deleteReport"])
+  onCreateCoachPrescTask: CoachPrescTask @aws_subscribe(mutations: ["createCoachPrescTask"])
+  onUpdateCoachPrescTask: CoachPrescTask @aws_subscribe(mutations: ["updateCoachPrescTask"])
+  onDeleteCoachPrescTask: CoachPrescTask @aws_subscribe(mutations: ["deleteCoachPrescTask"])
+  onCreateReportsShared: ReportsShared @aws_subscribe(mutations: ["createReportsShared"])
+  onUpdateReportsShared: ReportsShared @aws_subscribe(mutations: ["updateReportsShared"])
+  onDeleteReportsShared: ReportsShared @aws_subscribe(mutations: ["deleteReportsShared"])
+  onCreateAppointment: Appointment @aws_subscribe(mutations: ["createAppointment"])
+  onUpdateAppointment: Appointment @aws_subscribe(mutations: ["updateAppointment"])
+  onDeleteAppointment: Appointment @aws_subscribe(mutations: ["deleteAppointment"])
+  onCreateCommunityMessage: CommunityMessage @aws_subscribe(mutations: ["createCommunityMessage"])
+  onUpdateCommunityMessage: CommunityMessage @aws_subscribe(mutations: ["updateCommunityMessage"])
+  onDeleteCommunityMessage: CommunityMessage @aws_subscribe(mutations: ["deleteCommunityMessage"])
+  onCreateMessage: Message @aws_subscribe(mutations: ["createMessage"])
+  onUpdateMessage: Message @aws_subscribe(mutations: ["updateMessage"])
+  onDeleteMessage: Message @aws_subscribe(mutations: ["deleteMessage"])
+  onCreateUserDatabase: UserDatabase @aws_subscribe(mutations: ["createUserDatabase"])
+  onUpdateUserDatabase: UserDatabase @aws_subscribe(mutations: ["updateUserDatabase"])
+  onDeleteUserDatabase: UserDatabase @aws_subscribe(mutations: ["deleteUserDatabase"])
+  onCreateAllergies: Allergies @aws_subscribe(mutations: ["createAllergies"])
+  onUpdateAllergies: Allergies @aws_subscribe(mutations: ["updateAllergies"])
+  onDeleteAllergies: Allergies @aws_subscribe(mutations: ["deleteAllergies"])
+  onCreateExperience: Experience @aws_subscribe(mutations: ["createExperience"])
+  onUpdateExperience: Experience @aws_subscribe(mutations: ["updateExperience"])
+  onDeleteExperience: Experience @aws_subscribe(mutations: ["deleteExperience"])
+  onCreateDoctor: Doctor @aws_subscribe(mutations: ["createDoctor"])
+  onUpdateDoctor: Doctor @aws_subscribe(mutations: ["updateDoctor"])
+  onDeleteDoctor: Doctor @aws_subscribe(mutations: ["deleteDoctor"])
+  onCreateCertificates: Certificates @aws_subscribe(mutations: ["createCertificates"])
+  onUpdateCertificates: Certificates @aws_subscribe(mutations: ["updateCertificates"])
+  onDeleteCertificates: Certificates @aws_subscribe(mutations: ["deleteCertificates"])
+  onCreateSlots: Slots @aws_subscribe(mutations: ["createSlots"])
+  onUpdateSlots: Slots @aws_subscribe(mutations: ["updateSlots"])
+  onDeleteSlots: Slots @aws_subscribe(mutations: ["deleteSlots"])
+  onCreateInvite: Invite @aws_subscribe(mutations: ["createInvite"])
+  onUpdateInvite: Invite @aws_subscribe(mutations: ["updateInvite"])
+  onDeleteInvite: Invite @aws_subscribe(mutations: ["deleteInvite"])
+  onCreateEducation: Education @aws_subscribe(mutations: ["createEducation"])
+  onUpdateEducation: Education @aws_subscribe(mutations: ["updateEducation"])
+  onDeleteEducation: Education @aws_subscribe(mutations: ["deleteEducation"])
+}
+
+type ModelBookMarkConnection {
+  items: [BookMark]
+  nextToken: String
+}
+
+input ModelBookMarkTypeInput {
+  eq: BookMarkType
+  ne: BookMarkType
+}
+
+input ModelBookMarkFilterInput {
+  id: ModelIDInput
+  userid: ModelIDInput
+  bookmarktype: ModelBookMarkTypeInput
+  discussiongroupid: ModelIDInput
+  livebroadcastingid: ModelIDInput
+  and: [ModelBookMarkFilterInput]
+  or: [ModelBookMarkFilterInput]
+  not: ModelBookMarkFilterInput
+}
+
+input CreateBookMarkInput {
+  id: ID
+  userid: ID!
+  bookmarktype: BookMarkType!
+  discussiongroupid: ID
+  livebroadcastingid: ID
+}
+
+input UpdateBookMarkInput {
+  id: ID!
+  userid: ID
+  bookmarktype: BookMarkType
+  discussiongroupid: ID
+  livebroadcastingid: ID
+}
+
+input DeleteBookMarkInput {
+  id: ID!
+}
+
+input ModelBookMarkConditionInput {
+  userid: ModelIDInput
+  bookmarktype: ModelBookMarkTypeInput
+  discussiongroupid: ModelIDInput
+  livebroadcastingid: ModelIDInput
+  and: [ModelBookMarkConditionInput]
+  or: [ModelBookMarkConditionInput]
+  not: ModelBookMarkConditionInput
+}
+
+type ModelPaymentRequestConnection {
+  items: [PaymentRequest]
+  nextToken: String
+}
+
+input ModelPaymentRequestTypeInput {
+  eq: PaymentRequestType
+  ne: PaymentRequestType
+}
+
+input ModelPaymenttoDoctorInput {
+  eq: PaymenttoDoctor
+  ne: PaymenttoDoctor
+}
+
+input ModelPaymentRequestFilterInput {
+  id: ModelIDInput
+  PaymentRequestType: ModelPaymentRequestTypeInput
+  doctorID: ModelIDInput
+  date: ModelStringInput
+  appointmentid: ModelIDInput
+  request: ModelPaymenttoDoctorInput
+  paidtodoctordate: ModelStringInput
+  and: [ModelPaymentRequestFilterInput]
+  or: [ModelPaymentRequestFilterInput]
+  not: ModelPaymentRequestFilterInput
+}
+
+input CreatePaymentRequestInput {
+  id: ID
+  PaymentRequestType: PaymentRequestType!
+  doctorID: ID!
+  date: AWSDateTime!
+  appointmentid: ID!
+  request: PaymenttoDoctor!
+  paidtodoctordate: AWSDateTime
+}
+
+input UpdatePaymentRequestInput {
+  id: ID!
+  PaymentRequestType: PaymentRequestType
+  doctorID: ID
+  date: AWSDateTime
+  appointmentid: ID
+  request: PaymenttoDoctor
+  paidtodoctordate: AWSDateTime
+}
+
+input DeletePaymentRequestInput {
+  id: ID!
+}
+
+input ModelPaymentRequestConditionInput {
+  PaymentRequestType: ModelPaymentRequestTypeInput
+  doctorID: ModelIDInput
+  date: ModelStringInput
+  appointmentid: ModelIDInput
+  request: ModelPaymenttoDoctorInput
+  paidtodoctordate: ModelStringInput
+  and: [ModelPaymentRequestConditionInput]
+  or: [ModelPaymentRequestConditionInput]
+  not: ModelPaymentRequestConditionInput
+}
+
+type ModelPackagesBuyConnection {
+  items: [PackagesBuy]
+  nextToken: String
+}
+
+input ModelDoctorTypeInput {
+  eq: DoctorType
+  ne: DoctorType
+}
+
+input ModelPaymentCompletionStatusInput {
+  eq: PaymentCompletionStatus
+  ne: PaymentCompletionStatus
+}
+
+input ModelPaymentModeInput {
+  eq: PaymentMode
+  ne: PaymentMode
+}
+
+input ModelPackagesBuyFilterInput {
+  id: ModelIDInput
+  doctorID: ModelIDInput
+  userID: ModelIDInput
+  numberofappointmentsused: ModelStringInput
+  consultationfees: ModelStringInput
+  conultationfesscurrency: ModelStringInput
+  numofappointments: ModelStringInput
+  validity: ModelStringInput
+  date: ModelStringInput
+  doctortype: ModelDoctorTypeInput
+  PaymentCompletionStatus: ModelPaymentCompletionStatusInput
+  PaymentMode: ModelPaymentModeInput
+  and: [ModelPackagesBuyFilterInput]
+  or: [ModelPackagesBuyFilterInput]
+  not: ModelPackagesBuyFilterInput
+}
+
+input CreatePackagesBuyInput {
+  id: ID
+  doctorID: ID!
+  userID: ID!
+  numberofappointmentsused: String!
+  consultationfees: String!
+  conultationfesscurrency: String!
+  numofappointments: String!
+  validity: String!
+  date: AWSDateTime!
+  doctortype: DoctorType!
+  PaymentCompletionStatus: PaymentCompletionStatus!
+  PaymentMode: PaymentMode
+}
+
+input UpdatePackagesBuyInput {
+  id: ID!
+  doctorID: ID
+  userID: ID
+  numberofappointmentsused: String
+  consultationfees: String
+  conultationfesscurrency: String
+  numofappointments: String
+  validity: String
+  date: AWSDateTime
+  doctortype: DoctorType
+  PaymentCompletionStatus: PaymentCompletionStatus
+  PaymentMode: PaymentMode
+}
+
+input DeletePackagesBuyInput {
+  id: ID!
+}
+
+input ModelPackagesBuyConditionInput {
+  doctorID: ModelIDInput
+  userID: ModelIDInput
+  numberofappointmentsused: ModelStringInput
+  consultationfees: ModelStringInput
+  conultationfesscurrency: ModelStringInput
+  numofappointments: ModelStringInput
+  validity: ModelStringInput
+  date: ModelStringInput
+  doctortype: ModelDoctorTypeInput
+  PaymentCompletionStatus: ModelPaymentCompletionStatusInput
+  PaymentMode: ModelPaymentModeInput
+  and: [ModelPackagesBuyConditionInput]
+  or: [ModelPackagesBuyConditionInput]
+  not: ModelPackagesBuyConditionInput
+}
+
+type ModelPackagesConnection {
+  items: [Packages]
+  nextToken: String
+}
+
+input ModelPackagesFilterInput {
+  id: ModelIDInput
+  doctorID: ModelIDInput
+  consultationfees: ModelStringInput
+  conultationfesscurrency: ModelStringInput
+  numofappointments: ModelStringInput
+  validity: ModelStringInput
+  doctortype: ModelDoctorTypeInput
+  and: [ModelPackagesFilterInput]
+  or: [ModelPackagesFilterInput]
+  not: ModelPackagesFilterInput
+}
+
+input CreatePackagesInput {
+  id: ID
+  doctorID: ID!
+  consultationfees: String!
+  conultationfesscurrency: String!
+  numofappointments: String!
+  validity: String!
+  doctortype: DoctorType!
+}
+
+input UpdatePackagesInput {
+  id: ID!
+  doctorID: ID
+  consultationfees: String
+  conultationfesscurrency: String
+  numofappointments: String
+  validity: String
+  doctortype: DoctorType
+}
+
+input DeletePackagesInput {
+  id: ID!
+}
+
+input ModelPackagesConditionInput {
+  doctorID: ModelIDInput
+  consultationfees: ModelStringInput
+  conultationfesscurrency: ModelStringInput
+  numofappointments: ModelStringInput
+  validity: ModelStringInput
+  doctortype: ModelDoctorTypeInput
+  and: [ModelPackagesConditionInput]
+  or: [ModelPackagesConditionInput]
+  not: ModelPackagesConditionInput
+}
+
+type ModelBroadCastConnection {
+  items: [BroadCast]
+  nextToken: String
+}
+
+input ModelBroadCastStatusInput {
+  eq: BroadCastStatus
+  ne: BroadCastStatus
+}
+
+input ModelBroadCastFilterInput {
+  id: ModelIDInput
+  doctorID: ModelIDInput
+  date: ModelStringInput
+  name: ModelStringInput
+  description: ModelStringInput
+  doctortype: ModelDoctorTypeInput
+  BroadCastStatus: ModelBroadCastStatusInput
+  and: [ModelBroadCastFilterInput]
+  or: [ModelBroadCastFilterInput]
+  not: ModelBroadCastFilterInput
+}
+
+input CreateBroadCastInput {
+  id: ID
+  doctorID: ID!
+  date: AWSDateTime!
+  name: String!
+  description: String!
+  doctortype: DoctorType!
+  BroadCastStatus: BroadCastStatus!
+}
+
+input UpdateBroadCastInput {
+  id: ID!
+  doctorID: ID
+  date: AWSDateTime
+  name: String
+  description: String
+  doctortype: DoctorType
+  BroadCastStatus: BroadCastStatus
+}
+
+input DeleteBroadCastInput {
+  id: ID!
+}
+
+input ModelBroadCastConditionInput {
+  doctorID: ModelIDInput
+  date: ModelStringInput
+  name: ModelStringInput
+  description: ModelStringInput
+  doctortype: ModelDoctorTypeInput
+  BroadCastStatus: ModelBroadCastStatusInput
+  and: [ModelBroadCastConditionInput]
+  or: [ModelBroadCastConditionInput]
+  not: ModelBroadCastConditionInput
+}
+
+type ModelCommunitiesConnection {
+  items: [Communities]
+  nextToken: String
+}
+
+input ModelCommunitiesFilterInput {
+  id: ModelIDInput
+  communityname: ModelStringInput
+  communityowner: ModelIDInput
+  description: ModelStringInput
+  and: [ModelCommunitiesFilterInput]
+  or: [ModelCommunitiesFilterInput]
+  not: ModelCommunitiesFilterInput
+}
+
+input CreateCommunitiesInput {
+  id: ID
+  communityname: String!
+  communityowner: ID!
+  description: String!
+}
+
+input UpdateCommunitiesInput {
+  id: ID!
+  communityname: String
+  communityowner: ID
+  description: String
+}
+
+input DeleteCommunitiesInput {
+  id: ID!
+}
+
+input ModelCommunitiesConditionInput {
+  communityname: ModelStringInput
+  communityowner: ModelIDInput
+  description: ModelStringInput
+  and: [ModelCommunitiesConditionInput]
+  or: [ModelCommunitiesConditionInput]
+  not: ModelCommunitiesConditionInput
+}
+
+type ModelContactUsConnection {
+  items: [ContactUs]
+  nextToken: String
+}
+
+input ModelContactUsFilterInput {
+  id: ModelIDInput
+  userid: ModelIDInput
+  date: ModelStringInput
+  title: ModelStringInput
+  description: ModelStringInput
+  and: [ModelContactUsFilterInput]
+  or: [ModelContactUsFilterInput]
+  not: ModelContactUsFilterInput
+}
+
+input CreateContactUsInput {
+  id: ID
+  userid: ID!
+  date: AWSDateTime!
+  title: String!
+  description: String!
+}
+
+input UpdateContactUsInput {
+  id: ID!
+  userid: ID
+  date: AWSDateTime
+  title: String
+  description: String
+}
+
+input DeleteContactUsInput {
+  id: ID!
+}
+
+input ModelContactUsConditionInput {
+  userid: ModelIDInput
+  date: ModelStringInput
+  title: ModelStringInput
+  description: ModelStringInput
+  and: [ModelContactUsConditionInput]
+  or: [ModelContactUsConditionInput]
+  not: ModelContactUsConditionInput
+}
+
+type ModelNotificationsConnection {
+  items: [Notifications]
+  nextToken: String
+}
+
+input ModelRequestInput {
+  eq: Request
+  ne: Request
+}
+
+input ModelNotificationsFilterInput {
+  id: ModelIDInput
+  meetingid: ModelIDInput
+  request: ModelRequestInput
+  userid: ModelIDInput
+  date: ModelStringInput
+  doctorid: ModelIDInput
+  and: [ModelNotificationsFilterInput]
+  or: [ModelNotificationsFilterInput]
+  not: ModelNotificationsFilterInput
+}
+
+input CreateNotificationsInput {
+  id: ID
+  meetingid: ID!
+  request: Request!
+  userid: ID!
+  date: AWSDateTime!
+  doctorid: ID!
+}
+
+input UpdateNotificationsInput {
+  id: ID!
+  meetingid: ID
+  request: Request
+  userid: ID
+  date: AWSDateTime
+  doctorid: ID
+}
+
+input DeleteNotificationsInput {
+  id: ID!
+}
+
+input ModelNotificationsConditionInput {
+  meetingid: ModelIDInput
+  request: ModelRequestInput
+  userid: ModelIDInput
+  date: ModelStringInput
+  doctorid: ModelIDInput
+  and: [ModelNotificationsConditionInput]
+  or: [ModelNotificationsConditionInput]
+  not: ModelNotificationsConditionInput
+}
+
+type ModelPaymentfromWalletConnection {
+  items: [PaymentfromWallet]
+  nextToken: String
+}
+
+input ModelPaymentfromWalletFilterInput {
+  id: ModelIDInput
+  amount: ModelStringInput
+  currency: ModelStringInput
+  date: ModelStringInput
+  paymentfrom: ModelIDInput
+  and: [ModelPaymentfromWalletFilterInput]
+  or: [ModelPaymentfromWalletFilterInput]
+  not: ModelPaymentfromWalletFilterInput
+}
+
+input CreatePaymentfromWalletInput {
+  id: ID
+  amount: String!
+  currency: String!
+  date: AWSDateTime!
+  paymentfrom: ID!
+}
+
+input UpdatePaymentfromWalletInput {
+  id: ID!
+  amount: String
+  currency: String
+  date: AWSDateTime
+  paymentfrom: ID
+}
+
+input DeletePaymentfromWalletInput {
+  id: ID!
+}
+
+input ModelPaymentfromWalletConditionInput {
+  amount: ModelStringInput
+  currency: ModelStringInput
+  date: ModelStringInput
+  paymentfrom: ModelIDInput
+  and: [ModelPaymentfromWalletConditionInput]
+  or: [ModelPaymentfromWalletConditionInput]
+  not: ModelPaymentfromWalletConditionInput
+}
+
+type ModelPaymentforWalletConnection {
+  items: [PaymentforWallet]
+  nextToken: String
+}
+
+input ModelPaymentforWalletFilterInput {
+  id: ModelIDInput
+  amount: ModelStringInput
+  currency: ModelStringInput
+  date: ModelStringInput
+  paymentfrom: ModelIDInput
+  and: [ModelPaymentforWalletFilterInput]
+  or: [ModelPaymentforWalletFilterInput]
+  not: ModelPaymentforWalletFilterInput
+}
+
+input CreatePaymentforWalletInput {
+  id: ID
+  amount: String!
+  currency: String!
+  date: AWSDateTime!
+  paymentfrom: ID!
+}
+
+input UpdatePaymentforWalletInput {
+  id: ID!
+  amount: String
+  currency: String
+  date: AWSDateTime
+  paymentfrom: ID
+}
+
+input DeletePaymentforWalletInput {
+  id: ID!
+}
+
+input ModelPaymentforWalletConditionInput {
+  amount: ModelStringInput
+  currency: ModelStringInput
+  date: ModelStringInput
+  paymentfrom: ModelIDInput
+  and: [ModelPaymentforWalletConditionInput]
+  or: [ModelPaymentforWalletConditionInput]
+  not: ModelPaymentforWalletConditionInput
+}
+
+type ModelPaymentforAppointmentConnection {
+  items: [PaymentforAppointment]
+  nextToken: String
+}
+
+input ModelPaymentforAppointmentFilterInput {
+  id: ModelIDInput
+  amount: ModelStringInput
+  paymentfrom: ModelIDInput
+  currency: ModelStringInput
+  date: ModelStringInput
+  paymentto: ModelIDInput
+  appointmentid: ModelIDInput
+  and: [ModelPaymentforAppointmentFilterInput]
+  or: [ModelPaymentforAppointmentFilterInput]
+  not: ModelPaymentforAppointmentFilterInput
+}
+
+input CreatePaymentforAppointmentInput {
+  id: ID
+  amount: String!
+  paymentfrom: ID!
+  currency: String!
+  date: AWSDateTime!
+  paymentto: ID!
+  appointmentid: ID!
+}
+
+input UpdatePaymentforAppointmentInput {
+  id: ID!
+  amount: String
+  paymentfrom: ID
+  currency: String
+  date: AWSDateTime
+  paymentto: ID
+  appointmentid: ID
+}
+
+input DeletePaymentforAppointmentInput {
+  id: ID!
+}
+
+input ModelPaymentforAppointmentConditionInput {
+  amount: ModelStringInput
+  paymentfrom: ModelIDInput
+  currency: ModelStringInput
+  date: ModelStringInput
+  paymentto: ModelIDInput
+  appointmentid: ModelIDInput
+  and: [ModelPaymentforAppointmentConditionInput]
+  or: [ModelPaymentforAppointmentConditionInput]
+  not: ModelPaymentforAppointmentConditionInput
+}
+
+type ModelWellnessPostConnection {
+  items: [WellnessPost]
+  nextToken: String
+}
+
+input ModelWellnessPostFilterInput {
+  id: ModelIDInput
+  title: ModelStringInput
+  image: ModelBooleanInput
+  date: ModelStringInput
+  description: ModelStringInput
+  and: [ModelWellnessPostFilterInput]
+  or: [ModelWellnessPostFilterInput]
+  not: ModelWellnessPostFilterInput
+}
+
+input CreateWellnessPostInput {
+  id: ID
+  title: String!
+  image: Boolean!
+  date: AWSDateTime!
+  description: String!
+}
+
+input UpdateWellnessPostInput {
+  id: ID!
+  title: String
+  image: Boolean
+  date: AWSDateTime
+  description: String
+}
+
+input DeleteWellnessPostInput {
+  id: ID!
+}
+
+input ModelWellnessPostConditionInput {
+  title: ModelStringInput
+  image: ModelBooleanInput
+  date: ModelStringInput
+  description: ModelStringInput
+  and: [ModelWellnessPostConditionInput]
+  or: [ModelWellnessPostConditionInput]
+  not: ModelWellnessPostConditionInput
+}
+
+type ModelPostConnection {
+  items: [Post]
+  nextToken: String
+}
+
+input ModelPostTypeInput {
+  eq: PostType
+  ne: PostType
+}
+
+input ModelVideoTypeInput {
+  eq: VideoType
+  ne: VideoType
+}
+
+input ModelPostFilterInput {
+  id: ModelIDInput
+  UserID: ModelIDInput
+  postidreference: ModelIDInput
+  PostType: ModelPostTypeInput
+  title: ModelStringInput
+  image: ModelBooleanInput
+  date: ModelStringInput
+  description: ModelStringInput
+  numberoflikes: ModelStringInput
+  imagetype: ModelVideoTypeInput
+  DoctorType: ModelDoctorTypeInput
+  and: [ModelPostFilterInput]
+  or: [ModelPostFilterInput]
+  not: ModelPostFilterInput
+}
+
+input CreatePostInput {
+  id: ID
+  UserID: ID!
+  postidreference: ID!
+  PostType: PostType!
+  title: String!
+  image: Boolean!
+  date: AWSDateTime!
+  description: String!
+  numberoflikes: String!
+  imagetype: VideoType
+  DoctorType: DoctorType
+}
+
+input UpdatePostInput {
+  id: ID!
+  UserID: ID
+  postidreference: ID
+  PostType: PostType
+  title: String
+  image: Boolean
+  date: AWSDateTime
+  description: String
+  numberoflikes: String
+  imagetype: VideoType
+  DoctorType: DoctorType
+}
+
+input DeletePostInput {
+  id: ID!
+}
+
+input ModelPostConditionInput {
+  UserID: ModelIDInput
+  postidreference: ModelIDInput
+  PostType: ModelPostTypeInput
+  title: ModelStringInput
+  image: ModelBooleanInput
+  date: ModelStringInput
+  description: ModelStringInput
+  numberoflikes: ModelStringInput
+  imagetype: ModelVideoTypeInput
+  DoctorType: ModelDoctorTypeInput
+  and: [ModelPostConditionInput]
+  or: [ModelPostConditionInput]
+  not: ModelPostConditionInput
+}
+
+type ModelLikesConnection {
+  items: [Likes]
+  nextToken: String
+}
+
+input ModelLikesFilterInput {
+  id: ModelIDInput
+  PostID: ModelIDInput
+  date: ModelStringInput
+  UserId: ModelIDInput
+  and: [ModelLikesFilterInput]
+  or: [ModelLikesFilterInput]
+  not: ModelLikesFilterInput
+}
+
+input CreateLikesInput {
+  id: ID
+  PostID: ID!
+  date: AWSDateTime!
+  UserId: ID!
+}
+
+input UpdateLikesInput {
+  id: ID!
+  PostID: ID
+  date: AWSDateTime
+  UserId: ID
+}
+
+input DeleteLikesInput {
+  id: ID!
+}
+
+input ModelLikesConditionInput {
+  PostID: ModelIDInput
+  date: ModelStringInput
+  UserId: ModelIDInput
+  and: [ModelLikesConditionInput]
+  or: [ModelLikesConditionInput]
+  not: ModelLikesConditionInput
+}
+
+type ModelCommentsConnection {
+  items: [Comments]
+  nextToken: String
+}
+
+input ModelUserTypeInput {
+  eq: UserType
+  ne: UserType
+}
+
+input ModelCommentsFilterInput {
+  id: ModelIDInput
+  PostID: ModelIDInput
+  UserId: ModelIDInput
+  date: ModelStringInput
+  comment: ModelStringInput
+  commentfrom: ModelUserTypeInput
+  and: [ModelCommentsFilterInput]
+  or: [ModelCommentsFilterInput]
+  not: ModelCommentsFilterInput
+}
+
+input CreateCommentsInput {
+  id: ID
+  PostID: ID!
+  UserId: ID!
+  date: AWSDateTime!
+  comment: String!
+  commentfrom: UserType!
+}
+
+input UpdateCommentsInput {
+  id: ID!
+  PostID: ID
+  UserId: ID
+  date: AWSDateTime
+  comment: String
+  commentfrom: UserType
+}
+
+input DeleteCommentsInput {
+  id: ID!
+}
+
+input ModelCommentsConditionInput {
+  PostID: ModelIDInput
+  UserId: ModelIDInput
+  date: ModelStringInput
+  comment: ModelStringInput
+  commentfrom: ModelUserTypeInput
+  and: [ModelCommentsConditionInput]
+  or: [ModelCommentsConditionInput]
+  not: ModelCommentsConditionInput
+}
+
+type ModelReplyCommentsConnection {
+  items: [ReplyComments]
+  nextToken: String
+}
+
+input ModelReplyCommentsFilterInput {
+  id: ModelIDInput
+  PostID: ModelIDInput
+  UserId: ModelIDInput
+  comment: ModelStringInput
+  date: ModelStringInput
+  commentfrom: ModelUserTypeInput
+  and: [ModelReplyCommentsFilterInput]
+  or: [ModelReplyCommentsFilterInput]
+  not: ModelReplyCommentsFilterInput
+}
+
+input CreateReplyCommentsInput {
+  id: ID
+  PostID: ID!
+  UserId: ID!
+  comment: String!
+  date: AWSDateTime!
+  commentfrom: UserType!
+}
+
+input UpdateReplyCommentsInput {
+  id: ID!
+  PostID: ID
+  UserId: ID
+  comment: String
+  date: AWSDateTime
+  commentfrom: UserType
+}
+
+input DeleteReplyCommentsInput {
+  id: ID!
+}
+
+input ModelReplyCommentsConditionInput {
+  PostID: ModelIDInput
+  UserId: ModelIDInput
+  comment: ModelStringInput
+  date: ModelStringInput
+  commentfrom: ModelUserTypeInput
+  and: [ModelReplyCommentsConditionInput]
+  or: [ModelReplyCommentsConditionInput]
+  not: ModelReplyCommentsConditionInput
+}
+
+type ModelReportConnection {
+  items: [Report]
+  nextToken: String
+}
+
+input ModelReportTypeInput {
+  eq: ReportType
+  ne: ReportType
+}
+
+input ModelReportFilterInput {
+  id: ModelIDInput
+  userID: ModelIDInput
+  doctorID: ModelIDInput
+  meetingid: ModelIDInput
+  reoporttype: ModelReportTypeInput
+  date: ModelStringInput
+  summnaryname: ModelStringInput
+  summarydosage: ModelStringInput
+  summnaryinstr: ModelStringInput
+  summnaryreason: ModelStringInput
+  rxname: ModelStringInput
+  rxdosage: ModelStringInput
+  rxinstr: ModelStringInput
+  rxreason: ModelStringInput
+  labsname: ModelStringInput
+  labsdosage: ModelStringInput
+  labsinstr: ModelStringInput
+  labsreason: ModelStringInput
+  visitnotes: ModelStringInput
+  and: [ModelReportFilterInput]
+  or: [ModelReportFilterInput]
+  not: ModelReportFilterInput
+}
+
+input CreateReportInput {
+  id: ID
+  userID: ID!
+  doctorID: ID
+  meetingid: ID
+  reoporttype: ReportType!
+  date: AWSDateTime!
+  summnaryname: String
+  summarydosage: String
+  summnaryinstr: String
+  summnaryreason: String
+  rxname: String
+  rxdosage: String
+  rxinstr: String
+  rxreason: String
+  labsname: String
+  labsdosage: String
+  labsinstr: String
+  labsreason: String
+  visitnotes: String
+}
+
+input UpdateReportInput {
+  id: ID!
+  userID: ID
+  doctorID: ID
+  meetingid: ID
+  reoporttype: ReportType
+  date: AWSDateTime
+  summnaryname: String
+  summarydosage: String
+  summnaryinstr: String
+  summnaryreason: String
+  rxname: String
+  rxdosage: String
+  rxinstr: String
+  rxreason: String
+  labsname: String
+  labsdosage: String
+  labsinstr: String
+  labsreason: String
+  visitnotes: String
+}
+
+input DeleteReportInput {
+  id: ID!
+}
+
+input ModelReportConditionInput {
+  userID: ModelIDInput
+  doctorID: ModelIDInput
+  meetingid: ModelIDInput
+  reoporttype: ModelReportTypeInput
+  date: ModelStringInput
+  summnaryname: ModelStringInput
+  summarydosage: ModelStringInput
+  summnaryinstr: ModelStringInput
+  summnaryreason: ModelStringInput
+  rxname: ModelStringInput
+  rxdosage: ModelStringInput
+  rxinstr: ModelStringInput
+  rxreason: ModelStringInput
+  labsname: ModelStringInput
+  labsdosage: ModelStringInput
+  labsinstr: ModelStringInput
+  labsreason: ModelStringInput
+  visitnotes: ModelStringInput
+  and: [ModelReportConditionInput]
+  or: [ModelReportConditionInput]
+  not: ModelReportConditionInput
+}
+
+type ModelCoachPrescTaskConnection {
+  items: [CoachPrescTask]
+  nextToken: String
+}
+
+input ModelWeekDayInput {
+  eq: WeekDay
+  ne: WeekDay
+}
+
+input ModelCoachPrescTaskFilterInput {
+  id: ModelIDInput
+  userID: ModelIDInput
+  doctorID: ModelIDInput
+  meetingid: ModelIDInput
+  weekday: ModelWeekDayInput
+  task: ModelStringInput
+  date: ModelStringInput
+  and: [ModelCoachPrescTaskFilterInput]
+  or: [ModelCoachPrescTaskFilterInput]
+  not: ModelCoachPrescTaskFilterInput
+}
+
+input CreateCoachPrescTaskInput {
+  id: ID
+  userID: ID!
+  doctorID: ID!
+  meetingid: ID!
+  weekday: WeekDay!
+  task: String!
+  date: AWSDateTime!
+}
+
+input UpdateCoachPrescTaskInput {
+  id: ID!
+  userID: ID
+  doctorID: ID
+  meetingid: ID
+  weekday: WeekDay
+  task: String
+  date: AWSDateTime
+}
+
+input DeleteCoachPrescTaskInput {
+  id: ID!
+}
+
+input ModelCoachPrescTaskConditionInput {
+  userID: ModelIDInput
+  doctorID: ModelIDInput
+  meetingid: ModelIDInput
+  weekday: ModelWeekDayInput
+  task: ModelStringInput
+  date: ModelStringInput
+  and: [ModelCoachPrescTaskConditionInput]
+  or: [ModelCoachPrescTaskConditionInput]
+  not: ModelCoachPrescTaskConditionInput
+}
+
+type ModelReportsSharedConnection {
+  items: [ReportsShared]
+  nextToken: String
+}
+
+input ModelReportsSharedFilterInput {
+  id: ModelIDInput
+  userID: ModelIDInput
+  doctorID: ModelIDInput
+  meetingid: ModelStringInput
+  date: ModelStringInput
+  and: [ModelReportsSharedFilterInput]
+  or: [ModelReportsSharedFilterInput]
+  not: ModelReportsSharedFilterInput
+}
+
+input CreateReportsSharedInput {
+  id: ID
+  userID: ID!
+  doctorID: ID!
+  meetingid: String!
+  date: AWSDateTime!
+}
+
+input UpdateReportsSharedInput {
+  id: ID!
+  userID: ID
+  doctorID: ID
+  meetingid: String
+  date: AWSDateTime
+}
+
+input DeleteReportsSharedInput {
+  id: ID!
+}
+
+input ModelReportsSharedConditionInput {
+  userID: ModelIDInput
+  doctorID: ModelIDInput
+  meetingid: ModelStringInput
+  date: ModelStringInput
+  and: [ModelReportsSharedConditionInput]
+  or: [ModelReportsSharedConditionInput]
+  not: ModelReportsSharedConditionInput
+}
+
+type ModelAppointmentConnection {
+  items: [Appointment]
+  nextToken: String
+}
+
+input ModelStatusInput {
+  eq: Status
+  ne: Status
+}
+
+input ModelAppointmentFilterInput {
+  id: ModelIDInput
+  userID: ModelIDInput
+  doctorID: ModelIDInput
+  paymentMode: ModelPaymentModeInput
+  packagebuyid: ModelIDInput
+  consultationfees: ModelStringInput
+  PaymentCompletionStatus: ModelPaymentCompletionStatusInput
+  conultationfesscurrency: ModelStringInput
+  starttime: ModelStringInput
+  slottime: ModelStringInput
+  date: ModelStringInput
+  meetingid: ModelIDInput
+  status: ModelStatusInput
+  request: ModelRequestInput
+  message: ModelStringInput
+  personalConsult: ModelBooleanInput
+  videoconsult: ModelBooleanInput
+  cancelledbyuser: ModelBooleanInput
+  cancellationdate: ModelStringInput
+  cancelledbydoctor: ModelBooleanInput
+  doctortype: ModelDoctorTypeInput
+  and: [ModelAppointmentFilterInput]
+  or: [ModelAppointmentFilterInput]
+  not: ModelAppointmentFilterInput
+}
+
+input CreateAppointmentInput {
+  id: ID
+  userID: ID!
+  doctorID: ID!
+  paymentMode: PaymentMode
+  packagebuyid: ID
+  consultationfees: String!
+  PaymentCompletionStatus: PaymentCompletionStatus!
+  conultationfesscurrency: String!
+  starttime: String!
+  slottime: String!
+  date: AWSDateTime!
+  meetingid: ID!
+  status: Status!
+  request: Request!
+  message: String
+  personalConsult: Boolean
+  videoconsult: Boolean
+  cancelledbyuser: Boolean
+  cancellationdate: AWSDateTime
+  cancelledbydoctor: Boolean
+  doctortype: DoctorType!
+}
+
+input UpdateAppointmentInput {
+  id: ID!
+  userID: ID
+  doctorID: ID
+  paymentMode: PaymentMode
+  packagebuyid: ID
+  consultationfees: String
+  PaymentCompletionStatus: PaymentCompletionStatus
+  conultationfesscurrency: String
+  starttime: String
+  slottime: String
+  date: AWSDateTime
+  meetingid: ID
+  status: Status
+  request: Request
+  message: String
+  personalConsult: Boolean
+  videoconsult: Boolean
+  cancelledbyuser: Boolean
+  cancellationdate: AWSDateTime
+  cancelledbydoctor: Boolean
+  doctortype: DoctorType
+}
+
+input DeleteAppointmentInput {
+  id: ID!
+}
+
+input ModelAppointmentConditionInput {
+  userID: ModelIDInput
+  doctorID: ModelIDInput
+  paymentMode: ModelPaymentModeInput
+  packagebuyid: ModelIDInput
+  consultationfees: ModelStringInput
+  PaymentCompletionStatus: ModelPaymentCompletionStatusInput
+  conultationfesscurrency: ModelStringInput
+  starttime: ModelStringInput
+  slottime: ModelStringInput
+  date: ModelStringInput
+  meetingid: ModelIDInput
+  status: ModelStatusInput
+  request: ModelRequestInput
+  message: ModelStringInput
+  personalConsult: ModelBooleanInput
+  videoconsult: ModelBooleanInput
+  cancelledbyuser: ModelBooleanInput
+  cancellationdate: ModelStringInput
+  cancelledbydoctor: ModelBooleanInput
+  doctortype: ModelDoctorTypeInput
+  and: [ModelAppointmentConditionInput]
+  or: [ModelAppointmentConditionInput]
+  not: ModelAppointmentConditionInput
+}
+
+type ModelCommunityMessageConnection {
+  items: [CommunityMessage]
+  nextToken: String
+}
+
+input ModelMessageTypeInput {
+  eq: MessageType
+  ne: MessageType
+}
+
+input ModelCommunityMessageFilterInput {
+  id: ModelIDInput
+  communityid: ModelIDInput
+  messagefrom: ModelIDInput
+  date: ModelStringInput
+  content: ModelStringInput
+  messagetype: ModelMessageTypeInput
+  and: [ModelCommunityMessageFilterInput]
+  or: [ModelCommunityMessageFilterInput]
+  not: ModelCommunityMessageFilterInput
+}
+
+input CreateCommunityMessageInput {
+  id: ID
+  communityid: ID!
+  messagefrom: ID!
+  date: AWSDateTime!
+  content: String!
+  messagetype: MessageType!
+}
+
+input UpdateCommunityMessageInput {
+  id: ID!
+  communityid: ID
+  messagefrom: ID
+  date: AWSDateTime
+  content: String
+  messagetype: MessageType
+}
+
+input DeleteCommunityMessageInput {
+  id: ID!
+}
+
+input ModelCommunityMessageConditionInput {
+  communityid: ModelIDInput
+  messagefrom: ModelIDInput
+  date: ModelStringInput
+  content: ModelStringInput
+  messagetype: ModelMessageTypeInput
+  and: [ModelCommunityMessageConditionInput]
+  or: [ModelCommunityMessageConditionInput]
+  not: ModelCommunityMessageConditionInput
+}
+
+type ModelMessageConnection {
+  items: [Message]
+  nextToken: String
+}
+
+input ModelMessageFilterInput {
+  id: ModelIDInput
+  DoctorsID: ModelIDInput
+  UserID: ModelIDInput
+  messagetype: ModelMessageTypeInput
+  content: ModelStringInput
+  currentmessage: ModelIDInput
+  readbydoctor: ModelBooleanInput
+  imageboolean: ModelBooleanInput
+  readbyuser: ModelBooleanInput
+  date: ModelStringInput
+  and: [ModelMessageFilterInput]
+  or: [ModelMessageFilterInput]
+  not: ModelMessageFilterInput
+}
+
+input CreateMessageInput {
+  id: ID
+  DoctorsID: ID!
+  UserID: ID!
+  messagetype: MessageType!
+  content: String
+  currentmessage: ID!
+  readbydoctor: Boolean!
+  imageboolean: Boolean!
+  readbyuser: Boolean!
+  date: AWSDateTime
+}
+
+input UpdateMessageInput {
+  id: ID!
+  DoctorsID: ID
+  UserID: ID
+  messagetype: MessageType
+  content: String
+  currentmessage: ID
+  readbydoctor: Boolean
+  imageboolean: Boolean
+  readbyuser: Boolean
+  date: AWSDateTime
+}
+
+input DeleteMessageInput {
+  id: ID!
+}
+
+input ModelMessageConditionInput {
+  DoctorsID: ModelIDInput
+  UserID: ModelIDInput
+  messagetype: ModelMessageTypeInput
+  content: ModelStringInput
+  currentmessage: ModelIDInput
+  readbydoctor: ModelBooleanInput
+  imageboolean: ModelBooleanInput
+  readbyuser: ModelBooleanInput
+  date: ModelStringInput
+  and: [ModelMessageConditionInput]
+  or: [ModelMessageConditionInput]
+  not: ModelMessageConditionInput
+}
+
+type ModelUserDatabaseConnection {
+  items: [UserDatabase]
+  nextToken: String
+}
+
+input ModelUserDatabaseFilterInput {
+  id: ModelIDInput
+  UserID: ModelIDInput
+  name: ModelStringInput
+  lastname: ModelStringInput
+  sex: ModelStringInput
+  birthday: ModelStringInput
+  hieght: ModelStringInput
+  weight: ModelStringInput
+  emailaddress: ModelStringInput
+  phonenumber: ModelStringInput
+  emergencycontact: ModelStringInput
+  streetaddress: ModelStringInput
+  city: ModelStringInput
+  zipcode: ModelStringInput
+  smoke: ModelStringInput
+  alchol: ModelStringInput
+  date: ModelStringInput
+  and: [ModelUserDatabaseFilterInput]
+  or: [ModelUserDatabaseFilterInput]
+  not: ModelUserDatabaseFilterInput
+}
+
+input CreateUserDatabaseInput {
+  id: ID
+  UserID: ID!
+  name: String
+  lastname: String
+  sex: String
+  birthday: String
+  hieght: String
+  weight: String
+  emailaddress: String
+  phonenumber: String
+  emergencycontact: String
+  streetaddress: String
+  city: String
+  zipcode: String
+  smoke: String
+  alchol: String
+  date: AWSDateTime
+}
+
+input UpdateUserDatabaseInput {
+  id: ID!
+  UserID: ID
+  name: String
+  lastname: String
+  sex: String
+  birthday: String
+  hieght: String
+  weight: String
+  emailaddress: String
+  phonenumber: String
+  emergencycontact: String
+  streetaddress: String
+  city: String
+  zipcode: String
+  smoke: String
+  alchol: String
+  date: AWSDateTime
+}
+
+input DeleteUserDatabaseInput {
+  id: ID!
+}
+
+input ModelUserDatabaseConditionInput {
+  UserID: ModelIDInput
+  name: ModelStringInput
+  lastname: ModelStringInput
+  sex: ModelStringInput
+  birthday: ModelStringInput
+  hieght: ModelStringInput
+  weight: ModelStringInput
+  emailaddress: ModelStringInput
+  phonenumber: ModelStringInput
+  emergencycontact: ModelStringInput
+  streetaddress: ModelStringInput
+  city: ModelStringInput
+  zipcode: ModelStringInput
+  smoke: ModelStringInput
+  alchol: ModelStringInput
+  date: ModelStringInput
+  and: [ModelUserDatabaseConditionInput]
+  or: [ModelUserDatabaseConditionInput]
+  not: ModelUserDatabaseConditionInput
+}
+
+type ModelAllergiesConnection {
+  items: [Allergies]
+  nextToken: String
+}
+
+input ModelAllergiesFilterInput {
+  id: ModelIDInput
+  userid: ModelIDInput
+  allergyname: ModelStringInput
+  description: ModelStringInput
+  and: [ModelAllergiesFilterInput]
+  or: [ModelAllergiesFilterInput]
+  not: ModelAllergiesFilterInput
+}
+
+input CreateAllergiesInput {
+  id: ID
+  userid: ID!
+  allergyname: String!
+  description: String!
+}
+
+input UpdateAllergiesInput {
+  id: ID!
+  userid: ID
+  allergyname: String
+  description: String
+}
+
+input DeleteAllergiesInput {
+  id: ID!
+}
+
+input ModelAllergiesConditionInput {
+  userid: ModelIDInput
+  allergyname: ModelStringInput
+  description: ModelStringInput
+  and: [ModelAllergiesConditionInput]
+  or: [ModelAllergiesConditionInput]
+  not: ModelAllergiesConditionInput
+}
+
+type ModelExperienceConnection {
+  items: [Experience]
+  nextToken: String
+}
+
+input ModelExperienceFilterInput {
+  id: ModelIDInput
+  doctorID: ModelIDInput
+  Title: ModelStringInput
+  CompanyName: ModelStringInput
+  location: ModelStringInput
+  doctortype: ModelDoctorTypeInput
+  Description: ModelStringInput
+  startdate: ModelStringInput
+  enddate: ModelStringInput
+  and: [ModelExperienceFilterInput]
+  or: [ModelExperienceFilterInput]
+  not: ModelExperienceFilterInput
+}
+
+input CreateExperienceInput {
+  id: ID
+  doctorID: ID!
+  Title: String!
+  CompanyName: String!
+  location: String!
+  doctortype: DoctorType!
+  Description: String!
+  startdate: String!
+  enddate: String!
+}
+
+input UpdateExperienceInput {
+  id: ID!
+  doctorID: ID
+  Title: String
+  CompanyName: String
+  location: String
+  doctortype: DoctorType
+  Description: String
+  startdate: String
+  enddate: String
+}
+
+input DeleteExperienceInput {
+  id: ID!
+}
+
+input ModelExperienceConditionInput {
+  doctorID: ModelIDInput
+  Title: ModelStringInput
+  CompanyName: ModelStringInput
+  location: ModelStringInput
+  doctortype: ModelDoctorTypeInput
+  Description: ModelStringInput
+  startdate: ModelStringInput
+  enddate: ModelStringInput
+  and: [ModelExperienceConditionInput]
+  or: [ModelExperienceConditionInput]
+  not: ModelExperienceConditionInput
+}
+
+type ModelDoctorConnection {
+  items: [Doctor]
+  nextToken: String
+}
+
+input ModelDoctorProfileReviewInput {
+  eq: DoctorProfileReview
+  ne: DoctorProfileReview
+}
+
+input ModelDoctorFilterInput {
+  id: ModelIDInput
+  UserID: ModelIDInput
+  doctortype: ModelDoctorTypeInput
+  name: ModelStringInput
+  about: ModelStringInput
+  npi: ModelStringInput
+  languagesspoken: ModelStringInput
+  country: ModelStringInput
+  localaddress: ModelStringInput
+  paycut: ModelStringInput
+  state: ModelStringInput
+  zipcode: ModelStringInput
+  specialization: ModelStringInput
+  yearsofexxperience: ModelStringInput
+  gender: ModelStringInput
+  status: ModelDoctorProfileReviewInput
+  insurance: ModelStringInput
+  offlineconsultation: ModelBooleanInput
+  appointmentscompleted: ModelStringInput
+  viewsonprofile: ModelStringInput
+  and: [ModelDoctorFilterInput]
+  or: [ModelDoctorFilterInput]
+  not: ModelDoctorFilterInput
+}
+
+input CreateDoctorInput {
+  id: ID
+  UserID: ID!
+  doctortype: DoctorType!
+  name: String
+  about: String
+  npi: String
+  languagesspoken: String
+  country: String
+  localaddress: String
+  paycut: String!
+  state: String
+  zipcode: String
+  specialization: String
+  yearsofexxperience: String
+  gender: String
+  status: DoctorProfileReview!
+  insurance: String
+  offlineconsultation: Boolean
+  appointmentscompleted: String!
+  viewsonprofile: String!
+}
+
+input UpdateDoctorInput {
+  id: ID!
+  UserID: ID
+  doctortype: DoctorType
+  name: String
+  about: String
+  npi: String
+  languagesspoken: String
+  country: String
+  localaddress: String
+  paycut: String
+  state: String
+  zipcode: String
+  specialization: String
+  yearsofexxperience: String
+  gender: String
+  status: DoctorProfileReview
+  insurance: String
+  offlineconsultation: Boolean
+  appointmentscompleted: String
+  viewsonprofile: String
+}
+
+input DeleteDoctorInput {
+  id: ID!
+}
+
+input ModelDoctorConditionInput {
+  UserID: ModelIDInput
+  doctortype: ModelDoctorTypeInput
+  name: ModelStringInput
+  about: ModelStringInput
+  npi: ModelStringInput
+  languagesspoken: ModelStringInput
+  country: ModelStringInput
+  localaddress: ModelStringInput
+  paycut: ModelStringInput
+  state: ModelStringInput
+  zipcode: ModelStringInput
+  specialization: ModelStringInput
+  yearsofexxperience: ModelStringInput
+  gender: ModelStringInput
+  status: ModelDoctorProfileReviewInput
+  insurance: ModelStringInput
+  offlineconsultation: ModelBooleanInput
+  appointmentscompleted: ModelStringInput
+  viewsonprofile: ModelStringInput
+  and: [ModelDoctorConditionInput]
+  or: [ModelDoctorConditionInput]
+  not: ModelDoctorConditionInput
+}
+
+type ModelCertificatesConnection {
+  items: [Certificates]
+  nextToken: String
+}
+
+input ModelCertificatesFilterInput {
+  id: ModelIDInput
+  doctorID: ModelIDInput
+  imageurl: ModelStringInput
+  description: ModelStringInput
+  doctortype: ModelDoctorTypeInput
+  and: [ModelCertificatesFilterInput]
+  or: [ModelCertificatesFilterInput]
+  not: ModelCertificatesFilterInput
+}
+
+input CreateCertificatesInput {
+  id: ID
+  doctorID: ID!
+  imageurl: String!
+  description: String!
+  doctortype: DoctorType!
+}
+
+input UpdateCertificatesInput {
+  id: ID!
+  doctorID: ID
+  imageurl: String
+  description: String
+  doctortype: DoctorType
+}
+
+input DeleteCertificatesInput {
+  id: ID!
+}
+
+input ModelCertificatesConditionInput {
+  doctorID: ModelIDInput
+  imageurl: ModelStringInput
+  description: ModelStringInput
+  doctortype: ModelDoctorTypeInput
+  and: [ModelCertificatesConditionInput]
+  or: [ModelCertificatesConditionInput]
+  not: ModelCertificatesConditionInput
+}
+
+type ModelSlotsConnection {
+  items: [Slots]
+  nextToken: String
+}
+
+input ModelSlotActiveInactiveInput {
+  eq: SlotActiveInactive
+  ne: SlotActiveInactive
+}
+
+input ModelSlotsFilterInput {
+  id: ModelIDInput
+  doctorID: ModelIDInput
+  consulttime: ModelStringInput
+  starttime: ModelStringInput
+  endtime: ModelStringInput
+  consultationfees: ModelStringInput
+  conultationfesscurrency: ModelStringInput
+  videoconsultations: ModelBooleanInput
+  inpersonconsultation: ModelBooleanInput
+  videoandinpersonconsultation: ModelBooleanInput
+  consultationtimeedit: ModelStringInput
+  monday: ModelBooleanInput
+  tuesday: ModelBooleanInput
+  wednesday: ModelBooleanInput
+  thursday: ModelBooleanInput
+  friday: ModelBooleanInput
+  saturday: ModelBooleanInput
+  sunday: ModelBooleanInput
+  activeinactive: ModelSlotActiveInactiveInput
+  doctortype: ModelDoctorTypeInput
+  and: [ModelSlotsFilterInput]
+  or: [ModelSlotsFilterInput]
+  not: ModelSlotsFilterInput
+}
+
+input CreateSlotsInput {
+  id: ID
+  doctorID: ID!
+  consulttime: String!
+  starttime: String!
+  endtime: String!
+  consultationfees: String!
+  conultationfesscurrency: String!
+  videoconsultations: Boolean!
+  inpersonconsultation: Boolean!
+  videoandinpersonconsultation: Boolean!
+  consultationtimeedit: String!
+  monday: Boolean!
+  tuesday: Boolean!
+  wednesday: Boolean!
+  thursday: Boolean!
+  friday: Boolean!
+  saturday: Boolean!
+  sunday: Boolean!
+  activeinactive: SlotActiveInactive
+  doctortype: DoctorType!
+}
+
+input UpdateSlotsInput {
+  id: ID!
+  doctorID: ID
+  consulttime: String
+  starttime: String
+  endtime: String
+  consultationfees: String
+  conultationfesscurrency: String
+  videoconsultations: Boolean
+  inpersonconsultation: Boolean
+  videoandinpersonconsultation: Boolean
+  consultationtimeedit: String
+  monday: Boolean
+  tuesday: Boolean
+  wednesday: Boolean
+  thursday: Boolean
+  friday: Boolean
+  saturday: Boolean
+  sunday: Boolean
+  activeinactive: SlotActiveInactive
+  doctortype: DoctorType
+}
+
+input DeleteSlotsInput {
+  id: ID!
+}
+
+input ModelSlotsConditionInput {
+  doctorID: ModelIDInput
+  consulttime: ModelStringInput
+  starttime: ModelStringInput
+  endtime: ModelStringInput
+  consultationfees: ModelStringInput
+  conultationfesscurrency: ModelStringInput
+  videoconsultations: ModelBooleanInput
+  inpersonconsultation: ModelBooleanInput
+  videoandinpersonconsultation: ModelBooleanInput
+  consultationtimeedit: ModelStringInput
+  monday: ModelBooleanInput
+  tuesday: ModelBooleanInput
+  wednesday: ModelBooleanInput
+  thursday: ModelBooleanInput
+  friday: ModelBooleanInput
+  saturday: ModelBooleanInput
+  sunday: ModelBooleanInput
+  activeinactive: ModelSlotActiveInactiveInput
+  doctortype: ModelDoctorTypeInput
+  and: [ModelSlotsConditionInput]
+  or: [ModelSlotsConditionInput]
+  not: ModelSlotsConditionInput
+}
+
+type ModelInviteConnection {
+  items: [Invite]
+  nextToken: String
+}
+
+input ModelInviteFilterInput {
+  id: ModelIDInput
+  doctorID: ModelIDInput
+  UserID: ModelIDInput
+  message: ModelStringInput
+  invite: ModelRequestInput
+  date: ModelStringInput
+  and: [ModelInviteFilterInput]
+  or: [ModelInviteFilterInput]
+  not: ModelInviteFilterInput
+}
+
+input CreateInviteInput {
+  id: ID
+  doctorID: ID!
+  UserID: ID!
+  message: String!
+  invite: Request!
+  date: AWSDateTime!
+}
+
+input UpdateInviteInput {
+  id: ID!
+  doctorID: ID
+  UserID: ID
+  message: String
+  invite: Request
+  date: AWSDateTime
+}
+
+input DeleteInviteInput {
+  id: ID!
+}
+
+input ModelInviteConditionInput {
+  doctorID: ModelIDInput
+  UserID: ModelIDInput
+  message: ModelStringInput
+  invite: ModelRequestInput
+  date: ModelStringInput
+  and: [ModelInviteConditionInput]
+  or: [ModelInviteConditionInput]
+  not: ModelInviteConditionInput
+}
+
+type ModelEducationConnection {
+  items: [Education]
+  nextToken: String
+}
+
+input ModelEducationFilterInput {
+  id: ModelIDInput
+  doctorID: ModelIDInput
+  nameofuniversity: ModelStringInput
+  fieldofstudy: ModelStringInput
+  doctortype: ModelDoctorTypeInput
+  degree: ModelStringInput
+  startdate: ModelStringInput
+  enddate: ModelStringInput
+  gradepoint: ModelStringInput
+  and: [ModelEducationFilterInput]
+  or: [ModelEducationFilterInput]
+  not: ModelEducationFilterInput
+}
+
+input CreateEducationInput {
+  id: ID
+  doctorID: ID!
+  nameofuniversity: String!
+  fieldofstudy: String!
+  doctortype: DoctorType!
+  degree: String!
+  startdate: String!
+  enddate: String!
+  gradepoint: String
+}
+
+input UpdateEducationInput {
+  id: ID!
+  doctorID: ID
+  nameofuniversity: String
+  fieldofstudy: String
+  doctortype: DoctorType
+  degree: String
+  startdate: String
+  enddate: String
+  gradepoint: String
+}
+
+input DeleteEducationInput {
+  id: ID!
+}
+
+input ModelEducationConditionInput {
+  doctorID: ModelIDInput
+  nameofuniversity: ModelStringInput
+  fieldofstudy: ModelStringInput
+  doctortype: ModelDoctorTypeInput
+  degree: ModelStringInput
+  startdate: ModelStringInput
+  enddate: ModelStringInput
+  gradepoint: ModelStringInput
+  and: [ModelEducationConditionInput]
+  or: [ModelEducationConditionInput]
+  not: ModelEducationConditionInput
+}

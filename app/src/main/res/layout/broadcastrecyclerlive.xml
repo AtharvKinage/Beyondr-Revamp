@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:id="@+id/materialcardview"
+    android:layout_margin="10dp"
+    android:layout_height="wrap_content">
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/profile_image"
+        android:layout_width='70dp'
+        app:shapeAppearance="@style/Rounded"
+        android:layout_height='70dp'
+        android:layout_marginTop="10dp"
+        android:layout_margin="4dp"
+        app:shapeAppearanceOverlay="@style/Rounded"
+        android:scaleType='fitXY'
+        android:src='@drawable/slide' />
+
+    <TextView
+        android:layout_marginTop="5dp"
+        android:layout_width="wrap_content"
+        android:gravity="center"
+        android:id="@+id/name"
+        android:fontFamily="@font/axiforma"
+        android:textColor="@color/black"
+        android:layout_gravity="center"
+        android:layout_height="wrap_content"
+        android:textSize="8dp"
+        android:text="Jarvis Pepperspray "/>
+</LinearLayout>

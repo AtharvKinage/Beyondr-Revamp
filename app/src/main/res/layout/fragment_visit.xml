@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="20dp"
+        >
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/profile_image"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/prof"
+            app:shapeAppearance="@style/Rounded3"
+            app:shapeAppearanceOverlay="@style/Rounded3"
+            app:civ_border_color="#978888"
+            app:civ_border_width="1dp"
+            />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="20dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Brian Hanner"
+                android:fontFamily="@font/axiforma"
+                android:textSize="24dp"
+                android:textStyle="bold"
+                android:textColor="#222222">
+            </TextView>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Thu"
+                    android:textColor="#222222"
+                    android:fontFamily="@font/axiforma"
+                    android:textSize="14dp">
+                </TextView>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Apr"
+                    android:textColor="#222222"
+                    android:fontFamily="@font/axiforma"
+                    android:textSize="14dp"
+                    android:layout_marginLeft="5dp">
+                </TextView>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="11"
+                    android:textColor="#222222"
+                    android:fontFamily="@font/axiforma"
+                    android:textSize="14dp"
+                    android:layout_marginLeft="5dp">
+
+                </TextView>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Time"
+                    android:textColor="#222222"
+                    android:fontFamily="@font/axiforma"
+                    android:textSize="14dp">
+
+                </TextView>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="₹"
+                    android:textSize="14dp"
+                    android:fontFamily="@font/axiforma"
+                    android:textColor="#000000"
+                    android:layout_marginLeft="140dp">
+
+                </TextView>
+
+                <TextView
+                    android:id="@+id/amount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/axiforma"
+                    android:text="2000"
+                    android:textColor="#000000"
+                    android:textSize="14dp">
+
+                </TextView>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="20dp">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="20dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Visit Notes"
+                android:fontFamily="@font/axiforma"
+                android:textSize="15dp"
+                android:textColor="#808080"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                >
+            </TextView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet."
+                android:textColor="#212121"
+                android:textSize="15dp"
+                android:fontFamily="@font/axiforma"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp">
+            </TextView>
+
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="20dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Appointment Details"
+                android:fontFamily="@font/axiforma"
+                android:textSize="15dp"
+                android:textColor="#808080"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                >
+            </TextView>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginLeft="10dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Duration"
+                    android:textColor="#989898"
+                    android:textSize="11dp"
+                    android:fontFamily="@font/axiforma">
+                </TextView>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=":"
+                    android:textSize="11dp"
+                    android:fontFamily="@font/axiforma"
+                    android:textColor="#989898"
+                    android:layout_marginLeft="210dp">
+                </TextView>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="11:99"
+                    android:textSize="11dp"
+                    android:fontFamily="@font/axiforma"
+                    android:textColor="#000000"
+                    android:layout_marginLeft="10dp">
+
+                </TextView>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginLeft="10dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Start time"
+                    android:textColor="#989898"
+                    android:textSize="11dp"
+                    android:fontFamily="@font/axiforma">
+                </TextView>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=":"
+                    android:textSize="11dp"
+                    android:fontFamily="@font/axiforma"
+                    android:textColor="#989898"
+                    android:layout_marginLeft="202dp">
+                </TextView>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="11:55"
+                    android:textSize="11dp"
+                    android:fontFamily="@font/axiforma"
+                    android:textColor="#000000"
+                    android:layout_marginLeft="10dp">
+
+                </TextView>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginLeft="10dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Date"
+                    android:textColor="#989898"
+                    android:textSize="11dp"
+                    android:fontFamily="@font/axiforma">
+                </TextView>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=":"
+                    android:textSize="11dp"
+                    android:fontFamily="@font/axiforma"
+                    android:textColor="#989898"
+                    android:layout_marginLeft="231dp">
+                </TextView>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="11-55-44"
+                    android:textSize="11dp"
+                    android:fontFamily="@font/axiforma"
+                    android:textColor="#000000"
+                    android:layout_marginLeft="10dp">
+
+                </TextView>
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

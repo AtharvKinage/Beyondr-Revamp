@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent">
+    <FrameLayout
+        android:layout_width="150dp"
+        android:layout_height="43dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="5dp"
+        android:background="@drawable/backalle">
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="match_parent"
+            android:layout_height="23dp"
+            android:layout_marginLeft="10dp"
+            android:background="@null"
+            android:fontFamily="@font/axiforma"
+            android:minHeight="50dp"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#FFFFFF"
+            android:textSize="13dp"
+            android:text="Health Record"
+            android:layout_marginTop="15dp">
+
+        </TextView>
+        <ImageView
+            android:layout_width="13dp"
+            android:layout_height="13dp"
+            android:src="@drawable/iconcross"
+            android:layout_marginLeft="130dp"
+            android:layout_marginTop="15dp">
+
+        </ImageView>
+
+    </FrameLayout>
+
+</LinearLayout>

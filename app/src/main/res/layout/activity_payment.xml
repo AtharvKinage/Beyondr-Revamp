@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".Payment">
+
+    <LinearLayout
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Payment"
+            android:textSize="30dp"
+            android:fontFamily="@font/axiforma"
+            android:textStyle="bold"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Complete your payment"
+            android:textSize="20dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/axiforma"/>
+
+        <TextView
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="40dp"
+            android:fontFamily="@font/axiforma"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/purple_200"
+            android:text="$333"/>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            app:strokeColor="@color/grey"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="0dp"
+            app:strokeWidth="1dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="20dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/wallet_purple"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:textColor="@color/purple_200"
+                    android:text="$678.98"
+                    android:fontFamily="@font/axiforma"
+                    android:layout_marginLeft="10dp"
+                    android:layout_gravity="bottom"
+                    android:gravity="bottom"/>
+
+                <TextView
+                    android:layout_gravity="right"
+                    android:fontFamily="@font/axiforma"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Pay with wallet"
+                    android:gravity="bottom|right"/>
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+    <LinearLayout
+        android:weightSum="5"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+       <LinearLayout
+           android:layout_gravity="center"
+           android:layout_weight="2"
+           android:layout_width="0dp"
+           android:layout_height="1dp"
+           android:background="@color/purple_200"/>
+
+        <TextView
+            android:textSize="20dp"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Or"/>
+
+        <LinearLayout
+            android:layout_gravity="center"
+            android:layout_weight="2"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:background="@color/purple_200"/>
+    </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Enter Card no"
+            android:layout_marginTop="20dp"/>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_marginTop="10dp"
+            app:cardCornerRadius="10dp"
+            android:backgroundTint="#F9FAFA"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="20dp">
+
+                <EditText
+                    android:fontFamily="@font/axiforma"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@null"/>
+
+                <LinearLayout
+                    android:gravity="right"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                <ImageView
+                    android:gravity="right"
+                    android:layout_gravity="right"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/circular_pair"/>
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="3">
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_marginTop="10dp"
+            app:cardCornerRadius="10dp"
+            android:backgroundTint="#F9FAFA"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:padding="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:fontFamily="@font/axiforma"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="CVV"/>
+
+                <EditText
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/axiforma"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"/>
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_marginTop="10dp"
+                app:cardCornerRadius="10dp"
+                android:layout_marginLeft="10dp"
+                android:backgroundTint="#F9FAFA"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:padding="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:fontFamily="@font/axiforma"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Expiry"/>
+
+                    <EditText
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/axiforma"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"/>
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_marginTop="10dp"
+            app:cardCornerRadius="10dp"
+            android:backgroundTint="#F9FAFA"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:padding="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:fontFamily="@font/axiforma"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Name"/>
+
+                <EditText
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/axiforma"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"/>
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_marginTop="10dp"
+            app:cardCornerRadius="10dp"
+            android:backgroundTint="#F9FAFA"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:padding="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="200dp">
+
+                <EditText
+                    android:layout_gravity="top"
+                    android:hint="Street address"
+                    android:fontFamily="@font/axiforma"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"/>
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <Spinner android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:entries="@array/search"
+            android:id="@+id/spinner1"
+            android:minHeight="40dp"
+            android:layout_marginTop="10dp"
+            android:scrollbars="none"
+            android:spinnerMode="dropdown"
+            />
+
+        <Spinner android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:entries="@array/search"
+            android:id="@+id/spinner2"
+            android:layout_marginTop="10dp"
+            android:minHeight="40dp"
+            android:scrollbars="none"
+            android:spinnerMode="dropdown"
+            />
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_marginTop="10dp"
+            app:cardCornerRadius="10dp"
+            android:layout_marginLeft="10dp"
+            android:backgroundTint="#F9FAFA"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:padding="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <EditText
+                   android:hint="Zipcode"
+                    android:fontFamily="@font/axiforma"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"/>
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:padding="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:text="Proceed"
+            android:textColor="@color/white"
+            android:textAllCaps="false"
+            android:backgroundTint="@color/purple_200"/>
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

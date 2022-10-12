@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="120dp">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="120dp"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:textSize="24dp"
+                android:layout_marginLeft="20dp"
+                android:textStyle="bold"
+                android:fontFamily="@font/axiforma"
+                android:textColor="@color/black"
+                android:text="Find Professionals"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/axiforma"
+                android:text="Doctors Coach to help"/>
+        </LinearLayout>
+
+    </RelativeLayout>
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:strokeWidth="1dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        app:cardCornerRadius="12dp"
+        android:layout_marginBottom="10dp"
+        app:strokeColor="@color/blue">
+        <SearchView
+            android:id="@+id/search_recipe"
+            android:layout_width="match_parent"
+            android:background="@drawable/bg_search"
+            android:layout_below="@+id/text"
+            android:layout_height="wrap_content"
+            android:iconifiedByDefault="false"
+            android:queryBackground="@android:color/transparent"
+            android:queryHint="Search doctor, services"
+            android:searchIcon="@drawable/ic_baseline_search_24"
+            android:supportsRtl="true"
+            android:layoutDirection="rtl"
+            android:layout_alignParentRight="true"
+            android:theme="@style/SearchView"
+            app:queryBackground="@android:color/transparent" />
+    </com.google.android.material.card.MaterialCardView>
+    <com.google.android.material.tabs.TabLayout
+        android:layout_margin="20dp"
+        android:layout_height="wrap_content"
+        app:tabIndicatorColor="#00BCD4"
+        android:id="@+id/tabLayout"
+        app:tabTextColor="@color/black"
+        app:tabTextAppearance="@android:style/TextAppearance.Widget.TabWidget"
+        android:layout_width="match_parent">
+
+        <com.google.android.material.tabs.TabItem
+            android:text="Doctors"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content" />
+
+        <com.google.android.material.tabs.TabItem
+            android:text="Coach"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content" />
+
+    </com.google.android.material.tabs.TabLayout>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_margin="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </androidx.viewpager.widget.ViewPager>
+
+</LinearLayout>

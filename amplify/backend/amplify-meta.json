@@ -1,0 +1,104 @@
+{
+  "providers": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-preyank-preyank-111609-authRole",
+      "UnauthRoleArn": "arn:aws:iam::407303117763:role/amplify-preyank-preyank-111609-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::407303117763:role/amplify-preyank-preyank-111609-authRole",
+      "Region": "us-east-2",
+      "DeploymentBucketName": "amplify-preyank-preyank-111609-deployment",
+      "UnauthRoleName": "amplify-preyank-preyank-111609-unauthRole",
+      "StackName": "amplify-preyank-preyank-111609",
+      "StackId": "arn:aws:cloudformation:us-east-2:407303117763:stack/amplify-preyank-preyank-111609/9a0929b0-7b1a-11eb-b78e-0a895b109086",
+      "AmplifyAppId": "dmc6xpsf9njol"
+    }
+  },
+  "auth": {
+    "preyankb3f07430": {
+      "service": "Cognito",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [],
+      "customAuth": false,
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-preyank-preyank-111609-deployment/amplify-cfn-templates/auth/preyankb3f07430-cloudformation-template.yml",
+        "logicalId": "authpreyankb3f07430"
+      },
+      "lastPushTimeStamp": "2021-07-07T13:21:52.185Z",
+      "output": {
+        "UserPoolId": "us-east-2_P2odD9xnP",
+        "AppClientIDWeb": "696s8qmd5ghvv6upsj4ke6783",
+        "AppClientID": "6ptglfqbf626uf328c50e7nhku",
+        "IdentityPoolId": "us-east-2:549adadd-c0d9-4f76-90c4-27c97aee929a",
+        "IdentityPoolName": "preyankb3f07430_identitypool_b3f07430__preyank",
+        "UserPoolName": "preyankb3f07430_userpool_b3f07430",
+        "HostedUIDomain": "preyank-preyank",
+        "OAuthMetadata": "{\"AllowedOAuthFlows\":[\"code\"],\"AllowedOAuthScopes\":[\"phone\",\"email\",\"openid\",\"profile\",\"aws.cognito.signin.user.admin\"],\"CallbackURLs\":[\"myapp://callback/\"],\"LogoutURLs\":[\"myapp://signout/\"]}"
+      },
+      "lastPushDirHash": "PxDLwPpCg9BxoheHIS72L2a0lwo="
+    }
+  },
+  "api": {
+    "preyank": {
+      "service": "AppSync",
+      "providerPlugin": "awscloudformation",
+      "output": {
+        "authConfig": {
+          "defaultAuthentication": {
+            "authenticationType": "AMAZON_COGNITO_USER_POOLS",
+            "userPoolConfig": {
+              "userPoolId": "authpreyankb3f07430"
+            }
+          },
+          "additionalAuthenticationProviders": []
+        },
+        "GraphQLAPIIdOutput": "jerscnfmhrddpompldqbxy2mwe",
+        "GraphQLAPIEndpointOutput": "https://2t7bsf5peval7bgo5d5joycupi.appsync-api.us-east-2.amazonaws.com/graphql"
+      },
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-preyank-preyank-111609-deployment/amplify-cfn-templates/api/cloudformation-template.json",
+        "logicalId": "apipreyank"
+      },
+      "lastPushTimeStamp": "2021-07-07T13:21:52.188Z",
+      "lastPushDirHash": "xdf6U/t1IROHcp7SxaPNni1eYc4="
+    }
+  },
+  "storage": {
+    "Preyank": {
+      "service": "S3",
+      "providerPlugin": "awscloudformation",
+      "output": {
+        "BucketName": "preyank111609-preyank",
+        "Region": "us-east-2"
+      },
+      "lastPushTimeStamp": "2021-07-07T13:21:52.191Z",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-preyank-preyank-111609-deployment/amplify-cfn-templates/storage/s3-cloudformation-template.json",
+        "logicalId": "storagePreyank"
+      },
+      "lastPushDirHash": "C42o3d4RjPgqHtf4BiatInRgPc4="
+    }
+  },
+  "notifications": {
+    "Health": {
+      "service": "Pinpoint",
+      "output": {
+        "Arn": "arn:aws:mobiletargeting:us-east-1:407303117763:apps/12c99ea37a774d3e84bdb33ab0d36a0e",
+        "Id": "12c99ea37a774d3e84bdb33ab0d36a0e",
+        "Name": "Health-preyank",
+        "tags": {},
+        "Region": "us-east-1",
+        "FCM": {
+          "ApplicationId": "12c99ea37a774d3e84bdb33ab0d36a0e",
+          "CreationDate": "2021-03-26T19:34:22.939Z",
+          "Enabled": true,
+          "HasCredential": true,
+          "Id": "gcm",
+          "IsArchived": false,
+          "LastModifiedDate": "2021-03-26T19:34:22.939Z",
+          "Platform": "GCM",
+          "Version": 1
+        }
+      },
+      "lastPushTimeStamp": "2021-03-26T19:33:38.828Z"
+    }
+  }
+}

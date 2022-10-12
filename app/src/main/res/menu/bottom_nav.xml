@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/home"
+        android:title=""
+        android:icon="@drawable/ic_baseline_home_24"/>
+    <item
+        android:id="@+id/wellness"
+        android:title=""
+        android:icon="@drawable/wellnessicon"/>
+<!--    <item-->
+<!--        android:id="@+id/activity"-->
+<!--        android:title=""-->
+<!--        android:icon="@drawable/facebook"/>-->
+    <item
+        android:id="@+id/marketplace"
+        android:title=""
+        android:icon="@drawable/ic_baseline_add"/>
+
+    <item
+        android:id="@+id/book"
+        android:title=""
+        android:icon="@drawable/calendar"/>
+
+    <item
+        android:id="@+id/healthrecord"
+        android:title=""
+        android:icon="@drawable/health"/>
+</menu>

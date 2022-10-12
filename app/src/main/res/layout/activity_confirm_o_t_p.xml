@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="20dp"
+            android:onClick="back"
+            android:layout_marginTop="20dp"
+            android:layout_centerVertical="true"
+            android:scaleType="center"
+            android:src="@drawable/back"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="E-mail Verification!"
+                android:textSize="20dp"
+                android:id="@+id/aaa"
+                android:textStyle="bold"
+                android:fontFamily="@font/axiforma"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp"
+                android:textColor="#222222"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="  Insert your OTP Code to continue"
+                android:layout_below="@+id/aaa"
+                android:textSize="13dp"
+                android:fontFamily="@font/axiforma"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="15dp"
+                android:textColor="#9093A3"/>
+            <ImageView
+                android:layout_width="65dp"
+                android:layout_height="68dp"
+                android:layout_marginRight="20dp"
+                android:src="@drawable/logo_square"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true" />
+
+
+        </RelativeLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="#F6F7F9"
+            android:background="@drawable/button_gray"
+            android:layout_marginRight="20dp"
+            android:layout_height="wrap_content">
+            <EditText
+                android:layout_width="match_parent"
+                android:id="@+id/etpassword"
+                android:minHeight="50dp"
+                android:layout_marginLeft="20dp"
+                android:hint=""
+                android:textSize="13dp"
+                android:fontFamily="@font/axiforma"
+                android:background="@null"
+                android:textColor="#6C6C6C"
+                android:textColorHint="#6C6C6C"
+                android:layout_height="wrap_content">
+
+            </EditText>
+
+        </FrameLayout>
+
+        <android.widget.Button
+            android:id="@+id/button"
+            style="@style/buttonStyle"
+            android:fontFamily="@font/axiforma"
+            android:textAllCaps="true"
+            android:onClick="verifyotp"
+            android:layout_above="@+id/button2"
+            android:layout_width="match_parent"
+            android:layout_marginBottom="15dp"
+            android:layout_marginTop="10dp"
+            android:layout_height="@dimen/button_height"
+            android:text="NEXT"
+            android:layout_alignParentBottom="true"
+            app:layout_constraintBottom_toTopOf="@+id/button2" />
+
+
+    </LinearLayout>
+
+</RelativeLayout>

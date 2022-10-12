@@ -1,0 +1,94 @@
+{
+    "UserAgent": "aws-amplify-cli/2.0",
+    "Version": "1.0",
+    "api": {
+        "plugins": {
+            "awsAPIPlugin": {
+                "preyank": {
+                    "endpointType": "GraphQL",
+                    "endpoint": "https://2t7bsf5peval7bgo5d5joycupi.appsync-api.us-east-2.amazonaws.com/graphql",
+                    "region": "us-east-2",
+                    "authorizationType": "AMAZON_COGNITO_USER_POOLS"
+                }
+            }
+        }
+    },
+    "auth": {
+        "plugins": {
+            "awsCognitoAuthPlugin": {
+                "UserAgent": "aws-amplify-cli/0.1.0",
+                "Version": "0.1.0",
+                "IdentityManager": {
+                    "Default": {}
+                },
+                "CredentialsProvider": {
+                    "CognitoIdentity": {
+                        "Default": {
+                            "PoolId": "us-east-2:549adadd-c0d9-4f76-90c4-27c97aee929a",
+                            "Region": "us-east-2"
+                        }
+                    }
+                },
+                "CognitoUserPool": {
+                    "Default": {
+                        "PoolId": "us-east-2_P2odD9xnP",
+                        "AppClientId": "6ptglfqbf626uf328c50e7nhku",
+                        "Region": "us-east-2"
+                    }
+                },
+                "Auth": {
+                    "Default": {
+                        "OAuth": {
+                            "WebDomain": "preyank-preyank.auth.us-east-2.amazoncognito.com",
+                            "AppClientId": "6ptglfqbf626uf328c50e7nhku",
+                            "SignInRedirectURI": "myapp://callback/",
+                            "SignOutRedirectURI": "myapp://signout/",
+                            "Scopes": [
+                                "phone",
+                                "email",
+                                "openid",
+                                "profile",
+                                "aws.cognito.signin.user.admin"
+                            ]
+                        },
+                        "authenticationFlowType": "USER_SRP_AUTH"
+                    }
+                },
+                "AppSync": {
+                    "Default": {
+                        "ApiUrl": "https://2t7bsf5peval7bgo5d5joycupi.appsync-api.us-east-2.amazonaws.com/graphql",
+                        "Region": "us-east-2",
+                        "AuthMode": "AMAZON_COGNITO_USER_POOLS",
+                        "ClientDatabasePrefix": "preyank_AMAZON_COGNITO_USER_POOLS"
+                    }
+                },
+                "S3TransferUtility": {
+                    "Default": {
+                        "Bucket": "preyank111609-preyank",
+                        "Region": "us-east-2"
+                    }
+                },
+                "PinpointAnalytics": {
+                    "Default": {
+                        "AppId": "12c99ea37a774d3e84bdb33ab0d36a0e",
+                        "Region": "us-east-1"
+                    }
+                },
+                "PinpointTargeting": {
+                    "Default": {
+                        "Region": "us-east-1"
+                    }
+                }
+            }
+        }
+    },
+    "storage": {
+        "plugins": {
+            "awsS3StoragePlugin": {
+                "bucket": "preyank111609-preyank",
+                "region": "us-east-2",
+                "defaultAccessLevel": "guest"
+            }
+        }
+    }
+}
